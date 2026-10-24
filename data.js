@@ -510,9 +510,14 @@ window.ORCHIDS_DATA = {
    "img": "images/banner2.jpg",
    "t": "Made with love",
    "s": "Custom frames, books and more"
+  },
+  {
+   "img": "images/banner3.jpg",
+   "t": "New slide",
+   "s": ""
   }
  ],
- "v": 1792854844546,
+ "v": 1792859691104,
  "C": [
   "Frame Stories",
   "Memory Books",
@@ -523,5 +528,6 @@ window.ORCHIDS_DATA = {
   "Tiny Treasures",
   "King's Corner",
   "Queen's Corner"
- ]
+ ],
+ "lv": 1792859691104
 };
