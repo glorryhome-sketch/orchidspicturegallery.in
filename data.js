@@ -105,20 +105,88 @@ window.ORCHIDS_DATA = {
    "long": "",
    "v": [
     [
+     "(4 × 6 inches)",
+     149,
+     199
+    ],
+    [
+     "(5 × 7 inches)",
+     199,
+     249
+    ],
+    [
+     "(6 × 8 inches)",
+     249,
+     299
+    ],
+    [
      "(8 × 12 inches / A4)",
      529,
      629
     ],
     [
+     "(10 × 12 inches)",
+     629,
+     729
+    ],
+    [
+     "(12 × 15 inches)",
+     729,
+     829
+    ],
+    [
      "(12 × 18 inches)",
      929,
      1099
+    ],
+    [
+     "(16 × 20 inches)",
+     1629,
+     1749
+    ],
+    [
+     "(16 × 24 inches)",
+     1829,
+     1949
+    ],
+    [
+     "(18 × 24 inches)",
+     2129,
+     2249
+    ],
+    [
+     "(20 × 24 inches)",
+     2329,
+     2449
+    ],
+    [
+     "(20 × 30 inches)",
+     3629,
+     3799
+    ],
+    [
+     "(24 × 30 inches)",
+     4729,
+     4899
+    ],
+    [
+     "(24 × 36 inches)",
+     5729,
+     5999
+    ],
+    [
+     "(30 × 40 inches)",
+     9429,
+     10999
     ]
    ],
-   "p": 529,
+   "p": 149,
    "img": "images/products/7.jpg",
    "imgs": [
-    "images/products/7.jpg"
+    "images/products/7.jpg",
+    "images/products/7-2.jpg",
+    "images/products/7-3.jpg",
+    "images/products/7-4.jpg"
    ],
    "so": false,
    "id": 7,
@@ -414,7 +482,7 @@ window.ORCHIDS_DATA = {
    "s": "Custom frames, books and more"
   }
  ],
- "v": 1792852118437,
+ "v": 1792852738426,
  "C": [
   "Frame Stories",
   "Memory Books",
