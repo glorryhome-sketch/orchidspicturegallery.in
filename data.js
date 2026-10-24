@@ -1,21 +1,21 @@
 window.ORCHIDS_DATA = {
  "P": [
   {
-   "n": "Acrylic Magnetic Photo Frame – Double-Sided Fridge Magnet for Fridge Photo Prints (with Photo)",
+   "n": "Acrylic Magnetic Photo Frame – Double-Sided",
    "c": "Tiny Treasures",
-   "d": "",
+   "d": "Fridge Magnet for Fridge Photo Prints (with Photo)",
    "long": "",
    "v": [
     [
-     "( 6X8.5 CM ) 199",
-     249
+     "( 6 X 8.5 CM )",
+     199
     ],
     [
-     "( 8.5 X 11 CM ) 249",
+     "( 8.5 X 11 CM )",
      299
     ]
    ],
-   "p": 249,
+   "p": 199,
    "img": "images/products/9.jpg",
    "imgs": [
     "images/products/9.jpg",
@@ -512,7 +512,7 @@ window.ORCHIDS_DATA = {
    "s": "Custom frames, books and more"
   }
  ],
- "v": 1792854347532,
+ "v": 1792854844546,
  "C": [
   "Frame Stories",
   "Memory Books",
