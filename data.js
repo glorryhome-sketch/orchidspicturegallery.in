@@ -515,9 +515,29 @@ window.ORCHIDS_DATA = {
    "img": "images/banner3.jpg",
    "t": "New slide",
    "s": ""
+  },
+  {
+   "img": "images/banner4.jpg",
+   "t": "New slide",
+   "s": ""
+  },
+  {
+   "img": "images/banner5.jpg",
+   "t": "New slide",
+   "s": ""
+  },
+  {
+   "img": "images/banner6.jpg",
+   "t": "New slide",
+   "s": ""
+  },
+  {
+   "img": "images/banner7.jpg",
+   "t": "New slide",
+   "s": ""
   }
  ],
- "v": 1792859691104,
+ "v": 1792893611282,
  "C": [
   "Frame Stories",
   "Memory Books",
@@ -529,5 +549,5 @@ window.ORCHIDS_DATA = {
   "King's Corner",
   "Queen's Corner"
  ],
- "lv": 1792859691104
+ "lv": 1792893611282
 };
