@@ -1,6 +1,32 @@
 window.ORCHIDS_DATA = {
  "P": [
   {
+   "n": "Customized Wooden Greeting Card with Photo Frame",
+   "c": "Queen's Corner",
+   "d": "",
+   "long": "",
+   "v": [
+    [
+     "Maxi Size (6X4 INCHES)",
+     349
+    ]
+   ],
+   "p": 349,
+   "img": "images/products/12.jpg",
+   "imgs": [
+    "images/products/12.jpg",
+    "images/products/12-2.jpg",
+    "images/products/12-3.jpg"
+   ],
+   "so": false,
+   "id": 12,
+   "i": "gift",
+   "g": [
+    "#D9B5D1",
+    "#7B3F7A"
+   ]
+  },
+  {
    "n": "Black Elegance Mug",
    "c": "Made for Two",
    "d": "",
@@ -576,7 +602,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1792899168125,
+ "v": 1792910892210,
  "C": [
   "Frame Stories",
   "Memory Books",
@@ -588,5 +614,6 @@ window.ORCHIDS_DATA = {
   "King's Corner",
   "Queen's Corner"
  ],
- "lv": 1792895130227
+ "lv": 1792903042933,
+ "L": "images/logo.png"
 };
