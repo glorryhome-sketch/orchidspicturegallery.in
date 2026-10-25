@@ -3,7 +3,7 @@ window.ORCHIDS_DATA = {
   {
    "n": "Personalized wooden tabletop photo collage frame",
    "c": "Lovebirds",
-   "d": "This item is a personalized wooden tabletop photo collage frame, typically customized for couples as a gift for special occasions like anniversaries, weddings, birthdays, or Valentine's Day.",
+   "d": "Typically customized for couples as a gift for special occasions like anniversaries, weddings, birthdays, or Valentine's Day.",
    "long": "",
    "v": [
     [
@@ -657,7 +657,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1792933570724,
+ "v": 1792938626957,
  "C": [
   "Frame Stories",
   "Memory Books",
