@@ -7,11 +7,11 @@ window.ORCHIDS_DATA = {
    "long": "",
    "v": [
     [
-     "Maxi Size (6X4 INCHES)",
-     349
+     "Maxi Size ( 6 X4 INCHES)",
+     299
     ]
    ],
-   "p": 349,
+   "p": 299,
    "img": "images/products/12.jpg",
    "imgs": [
     "images/products/12.jpg",
@@ -602,7 +602,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1792911387584,
+ "v": 1792913053513,
  "C": [
   "Frame Stories",
   "Memory Books",
