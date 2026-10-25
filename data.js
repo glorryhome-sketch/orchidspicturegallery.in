@@ -512,12 +512,10 @@ window.ORCHIDS_DATA = {
    "p": 599,
    "img": "images/products/4.jpg",
    "imgs": [
-    "images/products/4.jpg",
-    "images/products/4-2.jpg",
-    "images/products/4-3.jpg",
-    "images/products/4-4.jpg"
+    "images/products/4.jpg"
    ],
-   "so": false
+   "so": false,
+   "long": ""
   },
   {
    "id": 5,
@@ -681,7 +679,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1792945256196,
+ "v": 1792945292811,
  "C": [
   "Frame Stories",
   "Memory Books",
