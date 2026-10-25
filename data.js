@@ -1,6 +1,33 @@
 window.ORCHIDS_DATA = {
  "P": [
   {
+   "n": "Black Elegance Mug",
+   "c": "Made for Two",
+   "d": "",
+   "long": "",
+   "v": [
+    [
+     "H 3.5\" X 3.2\"",
+     349
+    ]
+   ],
+   "p": 349,
+   "img": "images/products/11.jpg",
+   "imgs": [
+    "images/products/11.jpg",
+    "images/products/11-2.jpg",
+    "images/products/11-3.jpg",
+    "images/products/11-4.jpg"
+   ],
+   "so": false,
+   "id": 11,
+   "i": "gift",
+   "g": [
+    "#D9B5D1",
+    "#7B3F7A"
+   ]
+  },
+  {
    "n": "White Mug",
    "c": "Made for Two",
    "d": "",
@@ -549,7 +576,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1792897580019,
+ "v": 1792899168125,
  "C": [
   "Frame Stories",
   "Memory Books",
