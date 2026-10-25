@@ -508,8 +508,8 @@ window.ORCHIDS_DATA = {
   },
   {
    "img": "images/banner2.jpg",
-   "t": "Made with love",
-   "s": "Custom frames, books and more"
+   "t": "New slide",
+   "s": ""
   },
   {
    "img": "images/banner3.jpg",
@@ -520,24 +520,9 @@ window.ORCHIDS_DATA = {
    "img": "images/banner4.jpg",
    "t": "New slide",
    "s": ""
-  },
-  {
-   "img": "images/banner5.jpg",
-   "t": "New slide",
-   "s": ""
-  },
-  {
-   "img": "images/banner6.jpg",
-   "t": "New slide",
-   "s": ""
-  },
-  {
-   "img": "images/banner7.jpg",
-   "t": "New slide",
-   "s": ""
   }
  ],
- "v": 1792894681557,
+ "v": 1792894849349,
  "C": [
   "Frame Stories",
   "Memory Books",
@@ -549,5 +534,5 @@ window.ORCHIDS_DATA = {
   "King's Corner",
   "Queen's Corner"
  ],
- "lv": 1792894681557
+ "lv": 1792894849349
 };
