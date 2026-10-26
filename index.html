@@ -343,6 +343,7 @@ footer{background:#3a2e25;color:#f7f2e9;padding:50px 5% 20px;margin-top:50px}
   <button class="go br" id="ap1" style="margin:0">＋ Add New Product</button>
   <button class="go br" id="ap5" style="margin:0">Manage Categories</button>
   <button class="go br" id="ap7" style="margin:0">Edit Logo</button>
+  <button class="go br" id="ap8" style="margin:0">Edit Scrolling Tiles</button>
   <button class="go br" id="ap2" style="margin:0">Edit Banner Slides</button>
   <button class="go br" id="ap3" style="margin:0">Edit Contact Info</button>
   <button class="go br" id="ap6" style="margin:0">🚀 Publish to GitHub</button>
@@ -371,6 +372,11 @@ footer{background:#3a2e25;color:#f7f2e9;padding:50px 5% 20px;margin-top:50px}
 <div class="ov" id="cm"><div class="md" role="dialog" aria-modal="true" aria-label="Manage categories">
  <div class="mh"><h3>Manage Categories</h3><button class="x" data-close aria-label="Close">✕</button></div>
  <form id="cmf"><div id="cml"></div><button type="button" class="go gr" id="cadd" style="margin:6px 0">＋ Add Category</button><button class="go br" type="submit">Save Categories</button></form>
+</div></div>
+
+<div class="ov" id="wm"><div class="md" role="dialog" aria-modal="true" aria-label="Edit scrolling tiles">
+ <div class="mh"><h3>Edit Scrolling Tiles</h3><button class="x" data-close aria-label="Close">✕</button></div>
+ <form id="wf"></form>
 </div></div>
 
 <div class="ov" id="bm"><div class="md" role="dialog" aria-modal="true" aria-label="Edit banners">
@@ -463,9 +469,10 @@ function drawSlides(){SL=S.B;
 drawSlides();
 if(!matchMedia("(prefers-reduced-motion:reduce)").matches)setInterval(function(){go(si+1)},4500);
 
-/* who is this aimed at */
-var wh=WHO.map(function(w,k){return '<button class="wi" data-c="'+w[3]+'"><i style="background:'+w[2]+'">'+w[1]+'<img src="images/'+WF[k]+'.png" alt="" onerror="this.remove()"></i><span>'+w[0]+'</span></button>'}).join("");
-$("wt").innerHTML=wh+wh;
+/* who is this aimed at (scrolling tiles, editable in admin) */
+function curTiles(){return S.W&&S.W.length?S.W:WHO.map(function(w,k){return{n:w[0],e:w[1],bg:w[2],c:w[3],img:"images/"+WF[k]+".png"}})}
+function drawWho(){var wh=curTiles().map(function(w){var src=LI[w.img]||w.img+(S.lv?"?v="+S.lv:"");return '<button class="wi" data-c="'+esc(w.c)+'"><i style="background:'+esc(w.bg||"#f4d9fc")+'">'+(w.e||"")+(w.img?'<img src="'+esc(src)+'" alt="" onerror="this.remove()">':"")+'</i><span>'+esc(w.n)+'</span></button>'}).join("");$("wt").innerHTML=wh+wh}
+drawWho();
 $("wt").onclick=function(e){var b=e.target.closest(".wi");if(b)pick(b.dataset.c,true)};
 $("va").onclick=function(){pick("All Products")};
 
@@ -723,6 +730,22 @@ function ev(n,o){try{if(window.gtag)window.gtag("event",n,o||{})}catch(e){}}
  window.dataLayer=window.dataLayer||[];window.gtag=function(){window.dataLayer.push(arguments)};window.gtag("js",new Date());window.gtag("config",GA_ID);
  var g=document.createElement("script");g.async=true;g.src="https://www.googletagmanager.com/gtag/js?id="+GA_ID;document.head.appendChild(g)})();
 [["atc","onclick","add_to_cart",1],["cf","onsubmit","order_buy_now",1],["cartf","onsubmit","order_from_cart",0]].forEach(function(x){var el=$(x[0]),f=el&&el[x[1]];if(f)el[x[1]]=function(){ev(x[2],x[3]?{item_name:cur.n}:{});return f.apply(this,arguments)}});
+var WN=[],WI={};
+function syncWN(){[].forEach.call($("wf").querySelectorAll("[data-k]"),function(el){WN[+el.dataset.i][el.dataset.k]=el.value.trim()})}
+function drawWN(){$("wf").innerHTML=WN.map(function(w,i){var cl=CATS.indexOf(w.c)<0?CATS.concat(w.c):CATS;return '<div class="cb" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px"><i style="width:56px;height:56px;border-radius:14px;overflow:hidden;background:'+esc(w.bg||"#f4d9fc")+';display:flex;align-items:center;justify-content:center;flex:none;font-style:normal;font-size:26px">'+(w.e||"")+'<img src="'+esc(LI[w.img]||w.img)+'" alt="" style="position:absolute;width:56px;height:56px;object-fit:cover" onerror="this.remove()"></i>'
+ +'<div style="flex:1;min-width:150px"><input data-i="'+i+'" data-k="n" value="'+esc(w.n)+'" placeholder="Label, e.g. For Husband"><select data-i="'+i+'" data-k="c">'+cl.map(function(c){return '<option'+(c===w.c?' selected':'')+'>'+esc(c)+'</option>'}).join("")+'</select><input type="file" accept="image/*" data-f="'+i+'"></div>'
+ +'<button type="button" class="go gr" data-del="'+i+'" aria-label="Delete tile" style="width:auto;margin:0;padding:6px 12px">🗑</button></div>'}).join("")
+ +'<button type="button" class="go gr" id="wadd" style="margin:6px 0">＋ Add Tile ('+WN.length+'/20)</button><button class="go br" type="submit">Save Tiles</button>'}
+$("ap8").onclick=function(){WN=JSON.parse(JSON.stringify(curTiles()));WI={};drawWN();openM("wm")};
+$("wf").onclick=function(e){var d=e.target.closest("[data-del]");
+ if(d){if(WN.length<2){alert("Keep at least one tile.");return}syncWN();WN.splice(+d.dataset.del,1);drawWN();return}
+ if(e.target.id==="wadd"){if(WN.length>=20){alert("Maximum 20 tiles.");return}syncWN();WN.push({n:"New tile",c:"All Products",bg:"#f4d9fc",img:""});drawWN()}};
+$("wf").onchange=function(e){var el=e.target;if(el.dataset.f===undefined||!el.files[0])return;var i=+el.dataset.f;
+ shrinkPng(el.files[0],function(d){syncWN();var p="images/who-"+Date.now().toString(36)+i+".png";WN[i].img=p;WN[i].e="";WI[p]=d;drawWN()})};
+$("wf").onsubmit=function(e){e.preventDefault();syncWN();
+ S.W=WN.filter(function(w){return w.n});
+ Object.keys(WI).forEach(function(p){if(!S.W.some(function(w){return w.img===p}))return;LI[p]=WI[p];idbPut(p,WI[p]);addPend(p);S.lv=Date.now()});
+ persist();drawWho();closeAll();openM("ap")};
 function applyLogo(){var im=document.querySelector(".bl");if(!im)return;var p=S.L||"images/logo.png";im.src=LI[p]||(p+(S.lv?"?v="+S.lv:""))}
 function shrinkPng(f,cb){var r=new FileReader();r.onload=function(){var im=new Image();im.onload=function(){var k=Math.min(1,600/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=Math.round(im.width*k);c.height=Math.round(im.height*k);c.getContext("2d").drawImage(im,0,0,c.width,c.height);cb(c.toDataURL("image/png"))};im.onerror=function(){$("lgmsg").textContent="This file is not a valid image."};im.src=r.result};r.readAsDataURL(f)}
 var newLogo=null;
@@ -731,7 +754,7 @@ $("lgi").onchange=function(){var f=this.files[0];if(!f)return;$("lgmsg").textCon
 $("lgf").onsubmit=function(e){e.preventDefault();if(!newLogo){$("lgmsg").textContent="Choose a logo image first.";return}
  var p="images/logo.png";LI[p]=newLogo;idbPut(p,newLogo);addPend(p);S.L=p;S.lv=Date.now();persist();applyLogo();closeAll();openM("ap")};
 applyLogo();
-idbLoad(function(){render();drawCart();applyLogo();drawSlides()});
+idbLoad(function(){render();drawCart();applyLogo();drawSlides();drawWho()});
 /* closing */
 document.querySelectorAll("[data-close]").forEach(function(b){b.onclick=function(){b.closest(".ov").classList.remove("open")}});
 document.querySelectorAll(".ov").forEach(function(o){o.onclick=function(e){if(e.target===o)o.classList.remove("open")}});
