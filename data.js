@@ -679,7 +679,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1792988836227,
+ "v": 1792989453417,
  "C": [
   "Frame Stories",
   "Memory Books",
@@ -691,7 +691,7 @@ window.ORCHIDS_DATA = {
   "King's Corner",
   "Queen's Corner"
  ],
- "lv": 1792988836227,
+ "lv": 1792989453417,
  "L": "images/logo.png",
  "W": [
   {
@@ -710,10 +710,10 @@ window.ORCHIDS_DATA = {
   },
   {
    "n": "For Friends",
-   "e": "🧑‍🤝‍🧑",
+   "e": "",
    "bg": "#e6e6ff",
    "c": "Made for Two",
-   "img": "images/friends.png"
+   "img": "images/who-mvorllvy2.png"
   },
   {
    "n": "For Kids",
@@ -745,10 +745,10 @@ window.ORCHIDS_DATA = {
   },
   {
    "n": "For Couple",
-   "e": "👫",
+   "e": "",
    "bg": "#f4d9fc",
    "c": "Made for Two",
-   "img": "images/couple.png"
+   "img": "images/who-mvormgpc7.png"
   },
   {
    "n": "For Husband",
