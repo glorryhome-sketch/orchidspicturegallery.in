@@ -679,7 +679,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1792989844178,
+ "v": 1792990052480,
  "C": [
   "Frame Stories",
   "Memory Books",
@@ -691,7 +691,7 @@ window.ORCHIDS_DATA = {
   "King's Corner",
   "Queen's Corner"
  ],
- "lv": 1792989844178,
+ "lv": 1792990052480,
  "L": "images/logo.png",
  "W": [
   {
@@ -724,10 +724,10 @@ window.ORCHIDS_DATA = {
   },
   {
    "n": "For Brother",
-   "e": "👨",
+   "e": "",
    "bg": "#d9eaff",
    "c": "King's Corner",
-   "img": "images/brother.png"
+   "img": "images/who-mvorzbsw4.png"
   },
   {
    "n": "Him",
