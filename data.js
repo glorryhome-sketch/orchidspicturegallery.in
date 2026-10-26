@@ -679,7 +679,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1792945292811,
+ "v": 1792988158253,
  "C": [
   "Frame Stories",
   "Memory Books",
@@ -691,6 +691,78 @@ window.ORCHIDS_DATA = {
   "King's Corner",
   "Queen's Corner"
  ],
- "lv": 1792913913053,
- "L": "images/logo.png"
+ "lv": 1792988158253,
+ "L": "images/logo.png",
+ "W": [
+  {
+   "n": "For Boyfriend",
+   "e": "👦",
+   "bg": "#f4d9fc",
+   "c": "King's Corner",
+   "img": "images/boyfriend.png"
+  },
+  {
+   "n": "For Girlfriend",
+   "e": "👧",
+   "bg": "#ffe4f2",
+   "c": "Queen's Corner",
+   "img": "images/girlfriend.png"
+  },
+  {
+   "n": "For Friends",
+   "e": "🧑‍🤝‍🧑",
+   "bg": "#e6e6ff",
+   "c": "Made for Two",
+   "img": "images/friends.png"
+  },
+  {
+   "n": "For Kids",
+   "e": "🧒",
+   "bg": "#e3fae8",
+   "c": "Tiny Treasures",
+   "img": "images/kids.png"
+  },
+  {
+   "n": "For Brother",
+   "e": "👨",
+   "bg": "#d9eaff",
+   "c": "King's Corner",
+   "img": "images/brother.png"
+  },
+  {
+   "n": "Him",
+   "e": "🧔",
+   "bg": "#f4d9fc",
+   "c": "King's Corner",
+   "img": "images/him.png"
+  },
+  {
+   "n": "Her",
+   "e": "👩",
+   "bg": "#ffe4f2",
+   "c": "Queen's Corner",
+   "img": "images/her.png"
+  },
+  {
+   "n": "For Couple",
+   "e": "👫",
+   "bg": "#f4d9fc",
+   "c": "Made for Two",
+   "img": "images/couple.png"
+  },
+  {
+   "n": "For Husband",
+   "e": "",
+   "bg": "#e6e6ff",
+   "c": "King's Corner",
+   "img": "images/who-mvoqu10h8.png"
+  },
+  {
+   "n": "For Wife",
+   "e": "👰",
+   "bg": "#ffe4f2",
+   "c": "Queen's Corner",
+   "img": "images/wife.png"
+  }
+ ]
 };
