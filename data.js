@@ -7,11 +7,11 @@ window.ORCHIDS_DATA = {
    "long": "",
    "v": [
     [
-     "3 sheet (6 Page)  ₹399      M.R.P.:",
-     799
+     "3 sheet (6 Page)     M.R.P.:",
+     799399
     ]
    ],
-   "p": 799,
+   "p": 799399,
    "img": "images/products/22.jpg",
    "imgs": [
     "images/products/22.jpg",
@@ -1089,7 +1089,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793205211970,
+ "v": 1793205291656,
  "C": [
   "Frame Stories",
   "Memory Books",
