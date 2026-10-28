@@ -1,6 +1,34 @@
 window.ORCHIDS_DATA = {
  "P": [
   {
+   "n": "5 Mini Frames Diwali Offer",
+   "c": "Frame Stories",
+   "d": "",
+   "long": "",
+   "v": [
+    [
+     "5 Mini Frames (4X4 INCH EACH)",
+     249
+    ]
+   ],
+   "p": 249,
+   "img": "images/products/16.jpg",
+   "imgs": [
+    "images/products/16.jpg",
+    "images/products/16-2.jpg",
+    "images/products/16-3.jpg",
+    "images/products/16-4.jpg",
+    "images/products/16-5.jpg"
+   ],
+   "so": false,
+   "id": 16,
+   "i": "gift",
+   "g": [
+    "#D9B5D1",
+    "#7B3F7A"
+   ]
+  },
+  {
    "n": "Corporate Mug",
    "c": "Tiny Treasures",
    "d": "",
@@ -679,7 +707,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793164700512,
+ "v": 1793169968729,
  "C": [
   "Frame Stories",
   "Memory Books",
