@@ -1,7 +1,7 @@
 window.ORCHIDS_DATA = {
  "P": [
   {
-   "n": "Newborn Baby - Rectangular photo Frame",
+   "n": "Newborn Baby",
    "c": "Tiny Treasures",
    "d": "",
    "long": "",
@@ -247,7 +247,7 @@ window.ORCHIDS_DATA = {
    ]
   },
   {
-   "n": "Happy Birthday - Rectangular Photo Frame",
+   "n": "Happy Birthday",
    "c": "Frame Stories",
    "d": "",
    "long": "",
@@ -1062,7 +1062,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793185547021,
+ "v": 1793185618173,
  "C": [
   "Frame Stories",
   "Memory Books",
