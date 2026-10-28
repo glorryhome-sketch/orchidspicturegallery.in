@@ -1,6 +1,88 @@
 window.ORCHIDS_DATA = {
  "P": [
   {
+   "n": "Newborn Baby - Rectangular photo Frame",
+   "c": "Frame Stories",
+   "d": "",
+   "long": "",
+   "v": [
+    [
+     "(8 × 12 inches / A4)",
+     529,
+     629
+    ],
+    [
+     "(10 × 12 inches)",
+     629,
+     729
+    ],
+    [
+     "(12 × 15 inches)",
+     729,
+     829
+    ],
+    [
+     "(12 × 18 inches)",
+     929,
+     1099
+    ],
+    [
+     "(16 × 20 inches)",
+     1629,
+     1749
+    ],
+    [
+     "(16 × 24 inches)",
+     1829,
+     1949
+    ],
+    [
+     "(18 × 24 inches)",
+     2129,
+     2249
+    ],
+    [
+     "(20 × 24 inches)",
+     2329,
+     2449
+    ],
+    [
+     "(20 × 30 inches)",
+     3629,
+     3799
+    ],
+    [
+     "(24 × 30 inches)",
+     4729,
+     4899
+    ],
+    [
+     "(24 × 36 inches)",
+     5729,
+     5999
+    ],
+    [
+     "(30 × 40 inches)",
+     9429,
+     10999
+    ]
+   ],
+   "p": 529,
+   "img": "images/products/21.jpg",
+   "imgs": [
+    "images/products/21.jpg",
+    "images/products/21-2.jpg",
+    "images/products/21-3.jpg"
+   ],
+   "so": false,
+   "id": 21,
+   "i": "gift",
+   "g": [
+    "#D9B5D1",
+    "#7B3F7A"
+   ]
+  },
+  {
    "n": "Our love story - Rectangular Photo Frame",
    "c": "Lovebirds",
    "d": "",
@@ -980,7 +1062,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793181945866,
+ "v": 1793185273495,
  "C": [
   "Frame Stories",
   "Memory Books",
