@@ -83,7 +83,7 @@ window.ORCHIDS_DATA = {
    ]
   },
   {
-   "n": "Our love story - Rectangular Photo Frame",
+   "n": "Our love story",
    "c": "Lovebirds",
    "d": "",
    "long": "",
@@ -1062,7 +1062,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793185516966,
+ "v": 1793185547021,
  "C": [
   "Frame Stories",
   "Memory Books",
