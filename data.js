@@ -1,6 +1,33 @@
 window.ORCHIDS_DATA = {
  "P": [
   {
+   "n": "Magic LED Photo Frame",
+   "c": "Frame Stories",
+   "d": "",
+   "long": "",
+   "v": [
+    [
+     "8X12 A4 SIZE",
+     1199
+    ]
+   ],
+   "p": 1199,
+   "img": "images/products/17.jpg",
+   "imgs": [
+    "images/products/17.jpg",
+    "images/products/17-2.jpg",
+    "images/products/17-3.jpg",
+    "images/products/17-4.jpg"
+   ],
+   "so": false,
+   "id": 17,
+   "i": "gift",
+   "g": [
+    "#D9B5D1",
+    "#7B3F7A"
+   ]
+  },
+  {
    "n": "5 Mini Frames Diwali Offer",
    "c": "Frame Stories",
    "d": "",
@@ -707,7 +734,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793170672566,
+ "v": 1793174011289,
  "C": [
   "Frame Stories",
   "Memory Books",
