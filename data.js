@@ -1230,7 +1230,7 @@ window.ORCHIDS_DATA = {
  ],
  "F": {
   "a": "Your shop address, City, Pincode",
-  "p": "9876543210",
+  "p": "7010690079",
   "e": "yourmail@gmail.com"
  },
  "B": [
@@ -1255,7 +1255,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793278006229,
+ "v": 1793289331936,
  "C": [
   "Frame Stories",
   "Memory Books",
