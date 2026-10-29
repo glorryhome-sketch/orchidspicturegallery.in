@@ -1229,9 +1229,9 @@ window.ORCHIDS_DATA = {
   }
  ],
  "F": {
-  "a": "Your shop address, City, Pincode",
+  "a": "31,Bharathi Nagar, VK Road, Peelamedu Post, Coimbatore, Tamilnadu, India",
   "p": "7010690079",
-  "e": "yourmail@gmail.com"
+  "e": "orchidspicturegallery@gmail.com"
  },
  "B": [
   {
@@ -1255,7 +1255,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793289331936,
+ "v": 1793289422112,
  "C": [
   "Frame Stories",
   "Memory Books",
