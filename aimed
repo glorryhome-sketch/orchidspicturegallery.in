@@ -237,8 +237,8 @@ footer{background:#3a2e25;color:#f7f2e9;padding:50px 5% 20px;margin-top:50px}
   <button class="sb p" id="sp" aria-label="Previous slide">❮</button><button class="sb n" id="sn" aria-label="Next slide">❯</button>
   <div class="dots" id="dots"></div>
  </div>
- <section class="who" aria-label="Every Heart, a Story">
-  <h2 class="ttl">Every Heart, a Story</h2>
+ <section class="who" aria-label="Who is this aimed at">
+  <h2 class="ttl">Who is this aimed at</h2>
   <a href="#shop" id="va">View all</a>
   <div class="wt" id="wt"></div>
  </section>
