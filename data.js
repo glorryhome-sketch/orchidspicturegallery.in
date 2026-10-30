@@ -254,7 +254,7 @@ window.ORCHIDS_DATA = {
   {
    "n": "Acrylic Photo Wall Clock",
    "c": "Made for Two",
-   "d": "",
+   "d": "💖 Choose from 18 Exclusive Premium Designs!\n\n🌟 Unique Shapes • Premium Look • Perfect Gifts 🎁\n❤️ Make Your Favourite Moments Special!",
    "long": "",
    "v": [
     [
@@ -1546,7 +1546,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793382794506,
+ "v": 1793382948194,
  "C": [
   "Frame Stories",
   "Memory Books",
