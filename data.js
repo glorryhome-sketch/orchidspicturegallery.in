@@ -1,6 +1,41 @@
 window.ORCHIDS_DATA = {
  "P": [
   {
+   "n": "Personalized Photo Pillows",
+   "c": "Queen's Corner",
+   "d": "",
+   "long": "",
+   "v": [
+    [
+     "12x15 INCHES  ( Single Side Print )",
+     749
+    ],
+    [
+     "12x15 INCHES  ( Double Side Print )",
+     949
+    ],
+    [
+     "13x13 INCHES  ( Double Side Print )",
+     929
+    ]
+   ],
+   "p": 749,
+   "img": "images/products/34.jpg",
+   "imgs": [
+    "images/products/34.jpg",
+    "images/products/34-2.jpg",
+    "images/products/34-3.jpg",
+    "images/products/34-4.jpg"
+   ],
+   "so": false,
+   "id": 34,
+   "i": "gift",
+   "g": [
+    "#D9B5D1",
+    "#7B3F7A"
+   ]
+  },
+  {
    "n": "Synthetic Lighting Photoframe",
    "c": "Frame Stories",
    "d": "",
@@ -1511,7 +1546,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793381354598,
+ "v": 1793382611147,
  "C": [
   "Frame Stories",
   "Memory Books",
