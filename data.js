@@ -139,7 +139,7 @@ window.ORCHIDS_DATA = {
   {
    "n": "Wood Keychain",
    "c": "Made for Two",
-   "d": "",
+   "d": "Your Memories, Crafted in Wood!\n🔑 Customized with Your Favourite Photos & Names 📸\n🎁 A Small Gift, A Lifetime of Memories! 💝",
    "long": "",
    "v": [
     [
@@ -1546,7 +1546,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793383433088,
+ "v": 1793383579689,
  "C": [
   "Frame Stories",
   "Memory Books",
