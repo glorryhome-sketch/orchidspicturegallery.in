@@ -225,7 +225,7 @@ window.ORCHIDS_DATA = {
   {
    "n": "Wallets",
    "c": "King's Corner",
-   "d": "",
+   "d": "💎 Your Style, Your Name, Your Identity!\n❤️ Customized with Your Name for a Unique & Premium Look.\n🎁 A Perfect Gift for Someone Special! 🎁",
    "long": "",
    "v": [
     [
@@ -1546,7 +1546,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793383655248,
+ "v": 1793383716415,
  "C": [
   "Frame Stories",
   "Memory Books",
