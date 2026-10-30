@@ -38,7 +38,7 @@ window.ORCHIDS_DATA = {
   {
    "n": "Synthetic Lighting Photoframe",
    "c": "Frame Stories",
-   "d": "",
+   "d": "Adapter FREE",
    "long": "",
    "v": [
     [
@@ -1546,7 +1546,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793383140201,
+ "v": 1793383303480,
  "C": [
   "Frame Stories",
   "Memory Books",
