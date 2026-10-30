@@ -167,7 +167,7 @@ window.ORCHIDS_DATA = {
   {
    "n": "Steel Keychain",
    "c": "Frame Stories",
-   "d": "",
+   "d": "🔑 Premium Shine • Stylish Design • Lasting Memories ❤️\n📸 Customize with Your Favourite Photos & Names!\n🎁 A Small Keepsake, A Big Bundle of Love! 💖",
    "long": "",
    "v": [
     [
@@ -1546,7 +1546,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793383579689,
+ "v": 1793383655248,
  "C": [
   "Frame Stories",
   "Memory Books",
