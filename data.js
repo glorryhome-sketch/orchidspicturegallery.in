@@ -3,7 +3,7 @@ window.ORCHIDS_DATA = {
   {
    "n": "Personalized Photo Pillows",
    "c": "Queen's Corner",
-   "d": "",
+   "d": "🌈 AVAILABLE COLOURS 🌈\n💙 Blue | 💛 Yellow | 🤍 White\n🧡 Orange | 💗 Pink",
    "long": "",
    "v": [
     [
@@ -1546,7 +1546,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793382611147,
+ "v": 1793382794506,
  "C": [
   "Frame Stories",
   "Memory Books",
