@@ -95,7 +95,7 @@ window.ORCHIDS_DATA = {
   {
    "n": "Name Boards (Tabletop)",
    "c": "Frame Stories",
-   "d": "",
+   "d": "🏡 Perfect for Home • Office • Desk Decor 🎁\n🌟 Customized with Your Name, Designed with Love! ❤️",
    "long": "",
    "v": [
     [
@@ -1546,7 +1546,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793383303480,
+ "v": 1793383433088,
  "C": [
   "Frame Stories",
   "Memory Books",
