@@ -1433,108 +1433,6 @@ window.ORCHIDS_DATA = {
    ]
   },
   {
-   "id": 1,
-   "n": "Magic Photo Frame",
-   "c": "Frame Stories",
-   "d": "Handcrafted photo frame with your memories.",
-   "i": "frame",
-   "g": [
-    "#D9B5D1",
-    "#7B3F7A"
-   ],
-   "v": [
-    [
-     "Mini Size (4X4 INCHES)",
-     199,
-     299
-    ],
-    [
-     "Medium Size (6X6 INCHES)",
-     349,
-     499
-    ],
-    [
-     "Standard Size (A4)",
-     449,
-     649
-    ],
-    [
-     "Large Size (A3)",
-     849,
-     1199
-    ]
-   ],
-   "p": 199,
-   "imgs": [
-    "images/products/1.jpg",
-    "images/products/1-2.jpg",
-    "images/products/1-3.jpg"
-   ],
-   "so": false,
-   "img": "images/products/1.jpg",
-   "long": ""
-  },
-  {
-   "id": 2,
-   "n": "Glow Bottle",
-   "c": "Frame Stories",
-   "d": "Personalised glowing bottle gift.",
-   "i": "bottle",
-   "g": [
-    "#9ed8db",
-    "#2f7f86"
-   ],
-   "v": [
-    [
-     "Standard (500ml)",
-     399
-    ],
-    [
-     "Large (750ml)",
-     549
-    ]
-   ],
-   "p": 399,
-   "img": "images/products/2.jpg",
-   "imgs": [
-    "images/products/2.jpg"
-   ],
-   "so": false,
-   "long": ""
-  },
-  {
-   "id": 3,
-   "n": "Surprise Gift Box",
-   "c": "Surprise gifts",
-   "d": "A box full of surprises for your loved ones.",
-   "i": "gift",
-   "g": [
-    "#f6c6a8",
-    "#b9643a"
-   ],
-   "v": [
-    [
-     "Small Box",
-     499
-    ],
-    [
-     "Medium Box",
-     799
-    ],
-    [
-     "Premium Box",
-     1199
-    ]
-   ],
-   "p": 499,
-   "img": "images/products/3.jpg",
-   "imgs": [
-    "images/products/3.jpg"
-   ],
-   "so": false,
-   "long": ""
-  },
-  {
    "id": 4,
    "n": "Memory Book",
    "c": "Memory Books",
@@ -1709,7 +1607,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793458211521,
+ "v": 1793461229986,
  "C": [
   "Frame Stories",
   "Memory Books",
