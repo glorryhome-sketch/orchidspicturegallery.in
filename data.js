@@ -1,9 +1,35 @@
 window.ORCHIDS_DATA = {
  "P": [
   {
+   "n": "Acrylic Fride Magnet",
+   "c": "Tiny Treasures",
+   "d": "We can customized any Shape (Fridge Magnet)",
+   "long": "",
+   "v": [
+    [
+     "Size (3.5 X 3.5 INCHES)",
+     349
+    ]
+   ],
+   "p": 349,
+   "img": "images/products/38.jpg",
+   "imgs": [
+    "images/products/38.jpg",
+    "images/products/38-2.jpg",
+    "images/products/38-3.jpg"
+   ],
+   "so": false,
+   "id": 38,
+   "i": "gift",
+   "g": [
+    "#D9B5D1",
+    "#7B3F7A"
+   ]
+  },
+  {
    "n": "MDF Caricature",
    "c": "Frame Stories",
-   "d": "",
+   "d": "🎨 Your Memories, Turned into Cute Masterpieces! ❤️\n✨ Personalized Caricature | 🪵 Premium MDF Finish | 🎁 Unique & Memorable Gifts\nYour Face, Your Style, Your Story! 💖",
    "long": "",
    "v": [
     [
@@ -1640,7 +1666,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793416660060,
+ "v": 1793417223811,
  "C": [
   "Frame Stories",
   "Memory Books",
