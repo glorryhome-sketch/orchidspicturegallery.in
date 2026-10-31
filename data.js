@@ -1,7 +1,7 @@
 window.ORCHIDS_DATA = {
  "P": [
   {
-   "n": "Acrylic Fride Magnet",
+   "n": "Acrylic Fridge Magnet",
    "c": "Tiny Treasures",
    "d": "We can customized any Shape (Fridge Magnet)",
    "long": "",
@@ -1666,7 +1666,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793417223811,
+ "v": 1793417303794,
  "C": [
   "Frame Stories",
   "Memory Books",
