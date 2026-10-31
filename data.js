@@ -1048,7 +1048,7 @@ window.ORCHIDS_DATA = {
    ]
   },
   {
-   "n": "5 Mini Frames Diwali Offer",
+   "n": "5 Mini Frames",
    "c": "Frame Stories",
    "d": "",
    "long": "",
@@ -1709,7 +1709,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793457525532,
+ "v": 1793457541572,
  "C": [
   "Frame Stories",
   "Memory Books",
