@@ -3,7 +3,7 @@ window.ORCHIDS_DATA = {
   {
    "n": "Metal Calendar",
    "c": "Frame Stories",
-   "d": "",
+   "d": "✨ Make Every Day Memorable! 📅\n💖 Elegant Design | 🗓️ Timeless Style | 🎁 Perfect Personalized Gift\nA Little Luxury to Brighten Every Day! ✨",
    "long": "",
    "v": [
     [
@@ -33,7 +33,7 @@ window.ORCHIDS_DATA = {
   {
    "n": "Sublimation Water Bottle",
    "c": "King's Corner",
-   "d": "",
+   "d": "💧 Sip in Style, Personalize Your Vibe! ✨\n🎨 Custom Designs | 📸 Photo Printing | 🎁 Perfect Personalized Gift",
    "long": "",
    "v": [
     [
@@ -1606,7 +1606,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793415736210,
+ "v": 1793415855878,
  "C": [
   "Frame Stories",
   "Memory Books",
