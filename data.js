@@ -1211,17 +1211,17 @@ window.ORCHIDS_DATA = {
    ]
   },
   {
-   "n": "White Mug",
+   "n": "Ceramic Mugs",
    "c": "Made for Two",
    "d": "",
    "long": "",
    "v": [
     [
-     "H 3.5\" x 3.2\"",
-     249
+     "H 9.5cm",
+     299
     ]
    ],
-   "p": 249,
+   "p": 299,
    "img": "images/products/10.jpg",
    "imgs": [
     "images/products/10.jpg",
@@ -1709,7 +1709,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793457814634,
+ "v": 1793458000789,
  "C": [
   "Frame Stories",
   "Memory Books",
