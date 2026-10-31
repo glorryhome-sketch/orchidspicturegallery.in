@@ -220,6 +220,7 @@ footer{background:#3a2e25;color:#f7f2e9;padding:50px 5% 20px;margin-top:50px}
 </style>
 </head>
 <body>
+<div id="offbar" hidden style="background:#2e7d32;color:#fff;text-align:center;padding:7px 10px;font-size:13px;font-weight:600"></div>
 <header>
  <a class="brand" href="#top" aria-label="Orchids Picture Gallery home"><img class="bl" src="images/logo.png" alt="Orchids Picture Gallery" onload="this.parentNode.classList.remove('nologo');this.style.display=''" onerror="this.parentNode.classList.add('nologo');this.style.display='none'"><span class="bfb"><div class="logo"></div><div class="bn">ORCHIDS<small>PICTURE GALLERY</small></div></span></a>
  <nav aria-label="Main"><a class="on" href="#top">Home</a><a href="#shop">Shop</a><a href="#shop">Gallery</a><a href="#about">About</a><a href="#about">Contact</a></nav>
@@ -356,7 +357,7 @@ footer{background:#3a2e25;color:#f7f2e9;padding:50px 5% 20px;margin-top:50px}
 
 <div class="ov" id="pyM" style="z-index:130"><div class="md" role="dialog" aria-modal="true" aria-label="Pay with UPI">
  <div class="mh"><h3>Complete Payment</h3><button class="x" data-close aria-label="Close">✕</button></div>
- <div style="text-align:center"><div style="font-size:13px;color:#777">Amount to pay</div><div id="pyAmt" style="font-size:30px;font-weight:800;color:var(--brown)"></div><div id="pyTo" style="font-size:13px;margin-bottom:10px"></div></div>
+ <div style="text-align:center"><div style="font-size:13px;color:#777">Amount to pay</div><div id="pyAmt" style="font-size:30px;font-weight:800;color:var(--brown)"></div><div id="pyOff" style="font-size:12px;color:#28a745;margin-top:2px"></div><div id="pyTo" style="font-size:13px;margin-bottom:10px"></div></div>
  <div id="pyBtns" style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px"></div>
  <div style="text-align:center;font-size:11px;color:#888;margin:6px 0">Buttons phone la mattum work aagum. Computer la irundha QR scan pannunga.</div>
  <div style="text-align:center;margin:10px 0 6px;font-size:12px;color:#777">or scan this QR with any UPI app</div>
@@ -369,6 +370,7 @@ footer{background:#3a2e25;color:#f7f2e9;padding:50px 5% 20px;margin-top:50px}
  <div class="mh"><h3>Payment Settings</h3><button class="x" data-close aria-label="Close">✕</button></div>
  <form id="pyf"><div class="fgp"><label for="pyu">UPI ID *</label><input id="pyu" required placeholder="name@okhdfcbank"></div>
  <div class="fgp"><label for="pyn">Name shown to customers</label><input id="pyn" placeholder="Srikanth M"></div>
+ <div class="fgp"><label for="pyo">Store-wide offer % on all products (0 = no offer)</label><input id="pyo" type="number" min="0" max="90" step="1" placeholder="10"></div>
  <div class="fgp"><label for="pyw">WhatsApp number for orders *</label><input id="pyw" inputmode="numeric" required placeholder="9894347133"></div>
  <button class="go br" type="submit">Save Payment Settings</button><div class="msg" id="pymsg" role="status"></div></form>
 </div></div>
@@ -562,7 +564,7 @@ function pm(){return "UPI (GPay / PhonePe / Paytm / QR)"}
 $("buy").onclick=function(){
  $("pvm").classList.remove("open");
  var v=VR(cur)[vi];
- $("cpv").innerHTML=art(cur)+'<div><h4>'+cur.n+'</h4><div>'+inr(v[1])+' × '+qty+' = <b>'+inr(v[1]*qty)+'</b></div><div style="color:#777;font-size:12px">Size: '+v[0]+'</div><div style="color:#28a745;font-size:11px">Payment: '+pm()+'</div></div>';
+ $("cpv").innerHTML=art(cur)+'<div><h4>'+cur.n+'</h4><div>'+inr(v[1])+' × '+qty+' = <b>'+inr(v[1]*qty)+'</b></div>'+offerLine(v[1]*qty)+'<div style="color:#777;font-size:12px">Size: '+v[0]+'</div><div style="color:#28a745;font-size:11px">Payment: '+pm()+'</div></div>';
  $("com").classList.add("open");
 };
 $("cf").onsubmit=function(e){
@@ -585,7 +587,7 @@ function esc(t){return String(t).replace(/[&<>"]/g,function(c){return{"&":"&amp;
 function drawCart(){
  CART=CART.filter(function(c){var p=prod(c.id);return p&&!p.so});
  var n=0,t=0;CART.forEach(function(c){n+=c.q;t+=c.q*CV(c)[1]});
- $("cc").textContent=n;$("cc").style.display=n?"block":"none";$("ct").textContent=inr(t);
+ $("cc").textContent=n;$("cc").style.display=n?"block":"none";{var o=offer(t);$("ct").innerHTML=o.p?'<small style="font:400 13px sans-serif;color:#999">'+inr(t)+" − "+o.p+"% offer = </small>"+inr(o.net):inr(t)}
  $("cartf").hidden=!CART.length;
  $("cl").innerHTML=CART.length?CART.map(function(c,i){var p=prod(c.id);
   return '<div class="ci">'+art(p)+'<div><h4>'+esc(p.n)+'</h4><small>'+CV(c)[0]+'</small>'+(c.w?'<small>Wish: '+esc(c.w)+'</small>':'')+(c.d?'<small>Date: '+esc(c.d)+'</small>':'')+(c.n?'<small>'+c.n+' photo(s) to send in chat</small>':'')+'<div class="cq"><button data-m="'+i+'" aria-label="Decrease">-</button><b>'+c.q+'</b><button data-p="'+i+'" aria-label="Increase">+</button><b style="margin-left:6px">'+inr(c.q*CV(c)[1])+'</b><a data-r="'+i+'" role="button" tabindex="0">Remove</a></div></div></div>'}).join(""):'<p class="empty">Your cart is empty. Add a gift to get started.</p>';
@@ -757,24 +759,27 @@ $("wf").onsubmit=function(e){e.preventDefault();syncWN();
  S.W=WN.filter(function(w){return w.n});
  Object.keys(WI).forEach(function(p){if(!S.W.some(function(w){return w.img===p}))return;LI[p]=WI[p];idbPut(p,WI[p]);addPend(p);S.lv=Date.now()});
  persist();drawWho();closeAll();openM("ap")};
-var PAYD={upi:"glorryhome@okhdfcbank",name:"Srikanth M",wa:"9894347133"},PAYST=null;
+var PAYD={upi:"glorryhome@okhdfcbank",name:"Srikanth M",wa:"9894347133",off:10},PAYST=null;
+function offer(t){var p=Number(payCfg().off)||0;if(p<=0||p>90)p=0;var d=Math.round(t*p)/100;return{p:p,d:d,net:Math.round((t-d)*100)/100}}
+function offerLine(t){var o=offer(t);return o.p?'<div style="color:#28a745;font-size:12px">🏷️ '+o.p+'% store offer: pay '+inr(o.net)+'</div>':""}
+function drawOff(){var o=offer(100),b=$("offbar");b.hidden=!o.p;b.textContent=o.p?"🎉 "+o.p+"% OFF on all products - discount applied at payment":""}
 function payCfg(){return Object.assign({},PAYD,S.PAY||{})}
 function upiQ(amt,ref){var c=payCfg();return "pa="+encodeURIComponent(c.upi)+"&pn="+encodeURIComponent(c.name)+"&am="+Number(amt).toFixed(2)+"&cu=INR&tn="+encodeURIComponent("Order "+ref)}
 function loadQR(cb){if(window.QRCode)return cb();var g=document.createElement("script");g.src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js";g.onload=function(){cb()};g.onerror=function(){cb(1)};document.head.appendChild(g)}
-function startPay(msg,total,done){var c=payCfg(),ref="ORC"+Date.now().toString(36).slice(-5).toUpperCase(),q=upiQ(total,ref);PAYST={msg:msg,total:total,ref:ref,done:done};
- $("pyAmt").textContent=inr(total);$("pyTo").textContent="Pay to: "+c.name;$("pyId").textContent=c.upi;$("pyCp").textContent="Copy";
+function startPay(msg,total,done){var c=payCfg(),ref="ORC"+Date.now().toString(36).slice(-5).toUpperCase(),o=offer(total),q=upiQ(o.net,ref);PAYST={msg:msg,total:o.net,gross:total,off:o,ref:ref,done:done};
+ $("pyAmt").textContent=inr(o.net);$("pyOff").textContent=o.p?"Subtotal "+inr(total)+" − "+o.p+"% offer ("+inr(o.d)+")":"";$("pyTo").textContent="Pay to: "+c.name;$("pyId").textContent=c.upi;$("pyCp").textContent="Copy";
  $("pyBtns").innerHTML=[["Google Pay","tez://upi/pay?","#e8f0fe"],["PhonePe","phonepe://pay?","#efe6fb"],["Paytm","paytmmp://pay?","#e3f4fc"],["Other UPI app","upi://pay?","#f2f2f2"]].map(function(b){return '<a href="'+esc(b[1]+q)+'" style="display:block;text-align:center;padding:13px 6px;border-radius:10px;text-decoration:none;font-weight:700;color:#222;background:'+b[2]+';border:1px solid #ddd">'+b[0]+'</a>'}).join("");
  $("pyQr").innerHTML="";loadQR(function(err){if(err||!window.QRCode){$("pyQr").innerHTML='<span style="font-size:12px;color:#777">QR load aagala. Mela irukkura UPI ID-ku pay pannunga.</span>';return}new QRCode($("pyQr"),{text:"upi://pay?"+q,width:170,height:170,correctLevel:QRCode.CorrectLevel.M})});
  $("pyM").classList.add("open")}
-function sendOrder(paid){var s=PAYST;if(!s)return;var c=payCfg(),t=paid?"\n\n💳 *Payment:* UPI "+inr(s.total)+" paid to "+c.upi+" (Ref: "+s.ref+")\n✅ I have paid. I will send the payment screenshot in this chat.":"\n\n💳 *Payment:* UPI - pay later (Ref: "+s.ref+")\n⏳ Please share the payment details.";
+function sendOrder(paid){var s=PAYST;if(!s)return;var c=payCfg(),t=(s.off.p?"\n\n🏷️ *Store offer:* "+s.off.p+"% OFF (-"+inr(s.off.d)+") on "+inr(s.gross):"")+(paid?"\n\n💳 *Payment:* UPI "+inr(s.total)+" paid to "+c.upi+" (Ref: "+s.ref+")\n✅ I have paid. I will send the payment screenshot in this chat.":"\n\n💳 *Payment:* UPI - pay later (Ref: "+s.ref+")\n⏳ Please share the payment details.");
  window.open("https://wa.me/"+waNum()+"?text="+encodeURIComponent(s.msg+t),"_blank","noopener");$("pyM").classList.remove("open");PAYST=null;s.done();ev("order_sent",{value:s.total})}
 $("pyDone").onclick=function(){sendOrder(true)};
 $("pyCp").onclick=function(){var b=this;try{navigator.clipboard.writeText(payCfg().upi).then(function(){b.textContent="Copied"})}catch(e){}};
-$("ap9").onclick=function(){var c=payCfg();$("pyu").value=c.upi;$("pyn").value=c.name;$("pyw").value=c.wa;$("pymsg").textContent="";openM("pym")};
+$("ap9").onclick=function(){var c=payCfg();$("pyu").value=c.upi;$("pyn").value=c.name;$("pyw").value=c.wa;$("pyo").value=c.off;$("pymsg").textContent="";openM("pym")};
 $("pyf").onsubmit=function(e){e.preventDefault();var u=$("pyu").value.trim(),w=$("pyw").value.replace(/\D/g,"");
  if(!/^[\w.\-]{2,}@[\w]{2,}$/.test(u)){$("pymsg").textContent="UPI ID sariyaa illa. Example: name@okhdfcbank";return}
  if(w.length<10){$("pymsg").textContent="WhatsApp number 10 digit irukkanum.";return}
- S.PAY={upi:u,name:$("pyn").value.trim()||"Orchids Picture Gallery",wa:w.slice(-10)};persist();closeAll();openM("ap")};
+ S.PAY={upi:u,name:$("pyn").value.trim()||"Orchids Picture Gallery",wa:w.slice(-10),off:Math.min(90,Math.max(0,Number($("pyo").value)||0))};persist();drawOff();drawCart();closeAll();openM("ap")};
 function applyLogo(){var im=document.querySelector(".bl");if(!im)return;var p=S.L||"images/logo.png";im.src=LI[p]||(p+(S.lv?"?v="+S.lv:""))}
 function shrinkPng(f,cb){var r=new FileReader();r.onload=function(){var im=new Image();im.onload=function(){var k=Math.min(1,600/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=Math.round(im.width*k);c.height=Math.round(im.height*k);c.getContext("2d").drawImage(im,0,0,c.width,c.height);cb(c.toDataURL("image/png"))};im.onerror=function(){$("lgmsg").textContent="This file is not a valid image."};im.src=r.result};r.readAsDataURL(f)}
 var newLogo=null;
@@ -783,7 +788,8 @@ $("lgi").onchange=function(){var f=this.files[0];if(!f)return;$("lgmsg").textCon
 $("lgf").onsubmit=function(e){e.preventDefault();if(!newLogo){$("lgmsg").textContent="Choose a logo image first.";return}
  var p="images/logo.png";LI[p]=newLogo;idbPut(p,newLogo);addPend(p);S.L=p;S.lv=Date.now();persist();applyLogo();closeAll();openM("ap")};
 applyLogo();
-idbLoad(function(){render();drawCart();applyLogo();drawSlides();drawWho()});
+drawOff();
+idbLoad(function(){render();drawCart();applyLogo();drawSlides();drawWho();drawOff()});
 /* closing */
 document.querySelectorAll("[data-close]").forEach(function(b){b.onclick=function(){b.closest(".ov").classList.remove("open")}});
 document.querySelectorAll(".ov").forEach(function(o){o.onclick=function(e){if(e.target===o)o.classList.remove("open")}});
