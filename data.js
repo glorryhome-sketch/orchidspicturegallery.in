@@ -1184,17 +1184,17 @@ window.ORCHIDS_DATA = {
    ]
   },
   {
-   "n": "Black Elegance Mug",
+   "n": "Ceramic Mugs - Full Colour",
    "c": "Made for Two",
    "d": "",
    "long": "",
    "v": [
     [
-     "H 3.5\" X 3.2\"",
-     349
+     "H 9.5cm",
+     399
     ]
    ],
-   "p": 349,
+   "p": 399,
    "img": "images/products/11.jpg",
    "imgs": [
     "images/products/11.jpg",
@@ -1709,7 +1709,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793458062617,
+ "v": 1793458145010,
  "C": [
   "Frame Stories",
   "Memory Books",
