@@ -33,6 +33,10 @@ window.ORCHIDS_DATA = {
    "long": "",
    "v": [
     [
+     "Size 5x5 Inches",
+     499
+    ],
+    [
      "Size 6x4 Inches",
      549
     ],
@@ -41,11 +45,15 @@ window.ORCHIDS_DATA = {
      749
     ],
     [
+     "Size 7x8 Inches",
+     849
+    ],
+    [
      "Size 8x12 Inches",
      1049
     ]
    ],
-   "p": 549,
+   "p": 499,
    "img": "images/products/37.jpg",
    "imgs": [
     "images/products/37.jpg",
@@ -1666,7 +1674,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793417303794,
+ "v": 1793417670010,
  "C": [
   "Frame Stories",
   "Memory Books",
