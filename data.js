@@ -1754,7 +1754,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793455134823,
+ "v": 1793456312137,
  "C": [
   "Frame Stories",
   "Memory Books",
@@ -1846,5 +1846,11 @@ window.ORCHIDS_DATA = {
    "img": "images/who-mvoruojg10.png",
    "e": ""
   }
- ]
+ ],
+ "PAY": {
+  "upi": "glorryhome@okhdfcbank",
+  "name": "Srikanth M",
+  "wa": "9894347133",
+  "off": 10
+ }
 };
