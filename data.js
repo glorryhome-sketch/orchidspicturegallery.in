@@ -3,7 +3,7 @@ window.ORCHIDS_DATA = {
   {
    "n": "Money Box",
    "c": "Tiny Treasures",
-   "d": "",
+   "d": "💰 Save Today, Shine Tomorrow! ✨\n🎯 Make Every Rupee Count! 💖\n🎁 A Perfect Gift to Turn Little Savings into Big Dreams!\nSmall Savings, Big Dreams! 💸❤️",
    "long": "",
    "v": [
     [
@@ -1705,7 +1705,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793418353233,
+ "v": 1793418434144,
  "C": [
   "Frame Stories",
   "Memory Books",
