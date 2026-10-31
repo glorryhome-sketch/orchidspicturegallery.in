@@ -211,16 +211,25 @@ footer{background:#3a2e25;color:#f7f2e9;padding:50px 5% 20px;margin-top:50px}
 @media(prefers-reduced-motion:reduce){.wt{animation:none}.who{overflow-x:auto}.track,.pr,.buy,.wi i{transition:none}}
 .bdg{position:absolute;left:9px;top:8px;background:#e85b64;color:#fff;font-size:11px;font-weight:800;padding:4px 9px;border-radius:12px;z-index:1}.bdg.so{background:#444}.pr.so .ph{filter:grayscale(.8);opacity:.7}.ds{color:#999;font-size:12px;font-weight:400}.buy:disabled{background:#999;box-shadow:none;cursor:not-allowed;transform:none}
 .thm{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}.thm button{width:56px;height:56px;padding:0;border:2px solid transparent;border-radius:8px;overflow:hidden;background:#fff}.thm button.on{border-color:var(--pink)}.thm img{width:100%;height:100%;object-fit:cover;display:block}
-.ss{position:absolute;inset:0}.sl{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s ease}.sl.on{opacity:1}
+.slx{position:absolute;inset:0}.sl{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s ease}.sl.on{opacity:1}
 .sa{position:absolute;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;border:0;background:rgba(255,255,255,.88);color:var(--brown);font-size:24px;line-height:1;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.25);z-index:2}.sa.l{left:10px}.sa.r{right:10px}
 .sd{position:absolute;bottom:10px;left:0;right:0;display:flex;justify-content:center;gap:6px;z-index:2}.sd i{width:8px;height:8px;border-radius:8px;background:rgba(255,255,255,.65);transition:all .3s}.sd i.on{background:#fff;width:22px}
 #ap6{background:#1f9d55!important;color:#fff!important;box-shadow:0 0 0 3px rgba(31,157,85,.28)}#ap6:hover{background:#178246!important}
 #dl{background:#fff!important;color:var(--brown)!important;border:1.5px solid var(--brown)!important}
 .pdesc{margin-top:16px;padding:16px 18px;background:#fffaf2;border:1px solid #eadfce;border-radius:12px;font-size:13.5px;line-height:1.65;color:#3a2f28}.pdesc:empty{display:none}.pdesc h4{font-size:16px;margin:0 0 8px;color:var(--brown)}.pdesc p{margin:7px 0}.pdesc ul{margin:6px 0 6px 4px;padding-left:20px}.pdesc li{margin:4px 0}
+#offbar{position:relative;overflow:hidden;background:linear-gradient(90deg,#b3123a,#e8541a,#f3a712,#e8541a,#b3123a);background-size:300% 100%;color:#fff;font-weight:700;font-size:14px;padding:8px 0;animation:ofDown .8s cubic-bezier(.2,.9,.3,1.2) both,ofShine 6s linear infinite}
+#offbar .mq{display:flex;width:max-content;animation:ofMq 24s linear infinite}
+#offbar .mq span.it{white-space:nowrap;padding-right:70px}
+#offbar .pill{display:inline-block;background:#fff;color:#b3123a;border-radius:20px;padding:2px 12px;margin:0 6px;animation:ofPulse 1.2s ease-in-out infinite}
+@keyframes ofDown{from{transform:translateY(-100%);opacity:0}to{transform:none;opacity:1}}
+@keyframes ofShine{to{background-position:-300% 0}}
+@keyframes ofMq{to{transform:translateX(-50%)}}
+@keyframes ofPulse{50%{transform:scale(1.15)}}
+@media(prefers-reduced-motion:reduce){#offbar,#offbar .mq,#offbar .pill{animation:none}}
 </style>
 </head>
 <body>
-<div id="offbar" hidden style="background:#2e7d32;color:#fff;text-align:center;padding:7px 10px;font-size:13px;font-weight:600"></div>
+<div id="offbar" hidden></div>
 <header>
  <a class="brand" href="#top" aria-label="Orchids Picture Gallery home"><img class="bl" src="images/logo.png" alt="Orchids Picture Gallery" onload="this.parentNode.classList.remove('nologo');this.style.display=''" onerror="this.parentNode.classList.add('nologo');this.style.display='none'"><span class="bfb"><div class="logo"></div><div class="bn">ORCHIDS<small>PICTURE GALLERY</small></div></span></a>
  <nav aria-label="Main"><a class="on" href="#top">Home</a><a href="#shop">Shop</a><a href="#shop">Gallery</a><a href="#about">About</a><a href="#about">Contact</a></nav>
@@ -370,6 +379,7 @@ footer{background:#3a2e25;color:#f7f2e9;padding:50px 5% 20px;margin-top:50px}
  <div class="mh"><h3>Payment Settings</h3><button class="x" data-close aria-label="Close">✕</button></div>
  <form id="pyf"><div class="fgp"><label for="pyu">UPI ID *</label><input id="pyu" required placeholder="name@okhdfcbank"></div>
  <div class="fgp"><label for="pyn">Name shown to customers</label><input id="pyn" placeholder="Srikanth M"></div>
+ <div class="fgp"><label for="pyt">Offer title (example: Diwali Festival Offer)</label><input id="pyt" maxlength="40" placeholder="Festival Offer"></div>
  <div class="fgp"><label for="pyo">Store-wide offer % on all products (0 = no offer)</label><input id="pyo" type="number" min="0" max="90" step="1" placeholder="10"></div>
  <div class="fgp"><label for="pyw">WhatsApp number for orders *</label><input id="pyw" inputmode="numeric" required placeholder="9894347133"></div>
  <button class="go br" type="submit">Save Payment Settings</button><div class="msg" id="pymsg" role="status"></div></form>
@@ -532,7 +542,7 @@ function drawThm(){clearInterval(SS.t);var tk=++SS.n,a=ims(cur),pi=$("pi");$("th
  a.forEach(function(src,i){var im=new Image();im.onload=function(){ok[i]=src;fin()};im.onerror=fin;im.src=src});
  function fin(){if(--left)return;if(tk!==SS.n)return;build(ok.filter(Boolean))}
  function build(l){if(!l.length)return;pi.style.position="relative";pi.style.overflow="hidden";
-  var d=document.createElement("div");d.className="ss";
+  var d=document.createElement("div");d.className="slx";
   d.innerHTML=l.map(function(s,i){return '<img class="sl'+(i?'':' on')+'" src="'+esc(s)+'" alt="">'}).join("")+(l.length>1?'<button type="button" class="sa l" aria-label="Previous photo">&#8249;</button><button type="button" class="sa r" aria-label="Next photo">&#8250;</button><div class="sd">'+l.map(function(_,i){return '<i class="'+(i?'':'on')+'"></i>'}).join("")+'</div>':'');
   pi.appendChild(d);if(l.length<2)return;
   var k=0,im=d.querySelectorAll(".sl"),dt=d.querySelectorAll(".sd i");
@@ -732,7 +742,7 @@ $("gf").onsubmit=function(e){e.preventDefault();var tok=$("gt").value.trim(),r=$
 var CT=null;
 function cardSlides(){clearInterval(CT);var L=[];
  document.querySelectorAll(".pr").forEach(function(c){var h=c.querySelector("[data-f]");if(!h)return;var p=prod(+h.dataset.f);if(!p)return;var a=ims(p);if(a.length<2)return;var ph=c.querySelector(".ph");if(!ph)return;
-  ph.style.position="relative";ph.style.overflow="hidden";var d=document.createElement("div");d.className="ss";
+  ph.style.position="relative";ph.style.overflow="hidden";var d=document.createElement("div");d.className="slx";
   d.innerHTML=a.map(function(s,i){return '<img class="sl'+(i?'':' on')+'" src="'+esc(s)+'" alt="" onerror="this.remove()">'}).join("");ph.appendChild(d);L.push(d)});
  if(!L.length)return;
  CT=setInterval(function(){L.forEach(function(d){if(!d.isConnected||d.matches(":hover"))return;var im=d.querySelectorAll(".sl");if(im.length<2)return;var k=[].findIndex.call(im,function(e){return e.classList.contains("on")});im.forEach(function(e,j){e.classList.toggle("on",j===(k+1)%im.length)})})},3000)}
@@ -759,10 +769,11 @@ $("wf").onsubmit=function(e){e.preventDefault();syncWN();
  S.W=WN.filter(function(w){return w.n});
  Object.keys(WI).forEach(function(p){if(!S.W.some(function(w){return w.img===p}))return;LI[p]=WI[p];idbPut(p,WI[p]);addPend(p);S.lv=Date.now()});
  persist();drawWho();closeAll();openM("ap")};
-var PAYD={upi:"glorryhome@okhdfcbank",name:"Srikanth M",wa:"9894347133",off:10},PAYST=null;
+var PAYD={upi:"glorryhome@okhdfcbank",name:"Srikanth M",wa:"9894347133",off:10,ot:"Festival Offer"},PAYST=null;
 function offer(t){var p=Number(payCfg().off)||0;if(p<=0||p>90)p=0;var d=Math.round(t*p)/100;return{p:p,d:d,net:Math.round((t-d)*100)/100}}
 function offerLine(t){var o=offer(t);return o.p?'<div style="color:#28a745;font-size:12px">🏷️ '+o.p+'% store offer: pay '+inr(o.net)+'</div>':""}
-function drawOff(){var o=offer(100),b=$("offbar");b.hidden=!o.p;b.textContent=o.p?"🎉 "+o.p+"% OFF on all products - discount applied at payment":""}
+function drawOff(){var o=offer(100),b=$("offbar");b.hidden=!o.p;if(!o.p){b.innerHTML="";return}
+ var it='<span class="it">🎉 <b>'+esc(payCfg().ot||"Festival Offer")+'</b> <span class="pill">'+o.p+'% OFF</span> on all products ✨ Discount applied at payment 🎁</span>',g="";for(var i=0;i<8;i++)g+=it;b.innerHTML='<div class="mq">'+g+'</div>'}
 function payCfg(){return Object.assign({},PAYD,S.PAY||{})}
 function upiQ(amt,ref){var c=payCfg();return "pa="+encodeURIComponent(c.upi)+"&pn="+encodeURIComponent(c.name)+"&am="+Number(amt).toFixed(2)+"&cu=INR&tn="+encodeURIComponent("Order "+ref)}
 function loadQR(cb){if(window.QRCode)return cb();var g=document.createElement("script");g.src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js";g.onload=function(){cb()};g.onerror=function(){cb(1)};document.head.appendChild(g)}
@@ -775,11 +786,11 @@ function sendOrder(paid){var s=PAYST;if(!s)return;var c=payCfg(),t=(s.off.p?"\n\
  window.open("https://wa.me/"+waNum()+"?text="+encodeURIComponent(s.msg+t),"_blank","noopener");$("pyM").classList.remove("open");PAYST=null;s.done();ev("order_sent",{value:s.total})}
 $("pyDone").onclick=function(){sendOrder(true)};
 $("pyCp").onclick=function(){var b=this;try{navigator.clipboard.writeText(payCfg().upi).then(function(){b.textContent="Copied"})}catch(e){}};
-$("ap9").onclick=function(){var c=payCfg();$("pyu").value=c.upi;$("pyn").value=c.name;$("pyw").value=c.wa;$("pyo").value=c.off;$("pymsg").textContent="";openM("pym")};
+$("ap9").onclick=function(){var c=payCfg();$("pyu").value=c.upi;$("pyn").value=c.name;$("pyw").value=c.wa;$("pyo").value=c.off;$("pyt").value=c.ot;$("pymsg").textContent="";openM("pym")};
 $("pyf").onsubmit=function(e){e.preventDefault();var u=$("pyu").value.trim(),w=$("pyw").value.replace(/\D/g,"");
  if(!/^[\w.\-]{2,}@[\w]{2,}$/.test(u)){$("pymsg").textContent="UPI ID sariyaa illa. Example: name@okhdfcbank";return}
  if(w.length<10){$("pymsg").textContent="WhatsApp number 10 digit irukkanum.";return}
- S.PAY={upi:u,name:$("pyn").value.trim()||"Orchids Picture Gallery",wa:w.slice(-10),off:Math.min(90,Math.max(0,Number($("pyo").value)||0))};persist();drawOff();drawCart();closeAll();openM("ap")};
+ S.PAY={upi:u,name:$("pyn").value.trim()||"Orchids Picture Gallery",wa:w.slice(-10),off:Math.min(90,Math.max(0,Number($("pyo").value)||0)),ot:$("pyt").value.trim()||"Festival Offer"};persist();drawOff();drawCart();closeAll();openM("ap")};
 function applyLogo(){var im=document.querySelector(".bl");if(!im)return;var p=S.L||"images/logo.png";im.src=LI[p]||(p+(S.lv?"?v="+S.lv:""))}
 function shrinkPng(f,cb){var r=new FileReader();r.onload=function(){var im=new Image();im.onload=function(){var k=Math.min(1,600/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=Math.round(im.width*k);c.height=Math.round(im.height*k);c.getContext("2d").drawImage(im,0,0,c.width,c.height);cb(c.toDataURL("image/png"))};im.onerror=function(){$("lgmsg").textContent="This file is not a valid image."};im.src=r.result};r.readAsDataURL(f)}
 var newLogo=null;
