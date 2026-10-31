@@ -322,11 +322,10 @@ footer{background:#3a2e25;color:#f7f2e9;padding:50px 5% 20px;margin-top:50px}
  <div id="cl"></div>
  <form id="cartf" hidden>
   <div class="ctot"><span>Total</span><span id="ct"></span></div>
-  <div class="fgp"><label for="cpm">Payment option *</label><select id="cpm"><option>Google Pay / PhonePe / UPI</option><option>UPI QR Scanner</option></select></div>
   <div class="fgp"><label for="cn">Full Name *</label><input id="cn" required autocomplete="name"></div>
   <div class="fgp"><label for="cp2">WhatsApp / Phone Number *</label><input id="cp2" type="tel" required autocomplete="tel"></div>
   <div class="fgp"><label for="ca">Delivery Address with Pincode *</label><textarea id="ca" required placeholder="Door No, Street, Landmark, City, Pincode..."></textarea></div>
-  <button class="go wa" type="submit">Place Order via WhatsApp ✆</button>
+  <button class="go wa" type="submit">Continue to Payment →</button>
   <div class="msg">Photos are shared in the WhatsApp chat after you place the order.</div>
  </form>
 </aside></div>
@@ -342,6 +341,7 @@ footer{background:#3a2e25;color:#f7f2e9;padding:50px 5% 20px;margin-top:50px}
  <div class="fgp">
   <button class="go br" id="ap1" style="margin:0">＋ Add New Product</button>
   <button class="go br" id="ap5" style="margin:0">Manage Categories</button>
+  <button class="go br" id="ap9" style="margin:0">Payment Settings</button>
   <button class="go br" id="ap7" style="margin:0">Edit Logo</button>
   <button class="go br" id="ap8" style="margin:0">Edit Scrolling Tiles</button>
   <button class="go br" id="ap2" style="margin:0">Edit Banner Slides</button>
@@ -352,6 +352,25 @@ footer{background:#3a2e25;color:#f7f2e9;padding:50px 5% 20px;margin-top:50px}
   <button class="go gr" id="lo" style="margin:0">Logout</button>
  </div>
  <p class="msg">Edits show on this device straight away. To show them to customers, click Publish to GitHub (photos and data.js upload automatically).</p>
+</div></div>
+
+<div class="ov" id="pyM" style="z-index:130"><div class="md" role="dialog" aria-modal="true" aria-label="Pay with UPI">
+ <div class="mh"><h3>Complete Payment</h3><button class="x" data-close aria-label="Close">✕</button></div>
+ <div style="text-align:center"><div style="font-size:13px;color:#777">Amount to pay</div><div id="pyAmt" style="font-size:30px;font-weight:800;color:var(--brown)"></div><div id="pyTo" style="font-size:13px;margin-bottom:10px"></div></div>
+ <div id="pyBtns" style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px"></div>
+ <div style="text-align:center;font-size:11px;color:#888;margin:6px 0">Buttons phone la mattum work aagum. Computer la irundha QR scan pannunga.</div>
+ <div style="text-align:center;margin:10px 0 6px;font-size:12px;color:#777">or scan this QR with any UPI app</div>
+ <div id="pyQr" style="display:flex;justify-content:center;min-height:60px"></div>
+ <div style="text-align:center;font-size:13px;margin:8px 0">UPI ID: <b id="pyId"></b> <button type="button" class="go gr" id="pyCp" style="width:auto;margin:0 0 0 6px;padding:4px 10px;font-size:12px">Copy</button></div>
+ <button class="go" id="pyDone" type="button" style="width:100%;margin-top:6px">✅ I have paid - Send order on WhatsApp</button>
+</div></div>
+
+<div class="ov" id="pym"><div class="md" role="dialog" aria-modal="true" aria-label="Payment settings">
+ <div class="mh"><h3>Payment Settings</h3><button class="x" data-close aria-label="Close">✕</button></div>
+ <form id="pyf"><div class="fgp"><label for="pyu">UPI ID *</label><input id="pyu" required placeholder="name@okhdfcbank"></div>
+ <div class="fgp"><label for="pyn">Name shown to customers</label><input id="pyn" placeholder="Srikanth M"></div>
+ <div class="fgp"><label for="pyw">WhatsApp number for orders *</label><input id="pyw" inputmode="numeric" required placeholder="9894347133"></div>
+ <button class="go br" type="submit">Save Payment Settings</button><div class="msg" id="pymsg" role="status"></div></form>
 </div></div>
 
 <div class="ov" id="lgm"><div class="md" role="dialog" aria-modal="true" aria-label="Edit logo">
@@ -398,12 +417,7 @@ footer{background:#3a2e25;color:#f7f2e9;padding:50px 5% 20px;margin-top:50px}
    <div class="fgp"><label for="cd">Add "Memorable date" *</label><input type="date" id="cd"></div>
    <div class="fgp" style="margin:0"><label for="cq">Add "5 to 10 line wishes (or) quotes"</label><textarea id="cq" placeholder="Enter your quotes or messages..."></textarea></div>
      </div>
-  <div class="pay" role="radiogroup" aria-label="Payment option">
-   <b style="font-size:13px">Select Payment Option *</b>
-   <label><input type="radio" name="pm" value="Google Pay / PhonePe / UPI" checked> Google Pay / PhonePe / Paytm (UPI)</label>
-   <label><input type="radio" name="pm" value="UPI QR Scanner"> Scan UPI QR Code</label>
-   <div class="upi" id="upi">UPI ID: <b>9876543210@upi</b><br>Pay from any UPI app and share the screenshot on WhatsApp.</div>
-  </div>
+  <div style="font-size:12px;color:#666;margin:10px 0">💳 Payment: UPI (GPay / PhonePe / Paytm / QR). Order click panna adutha step la pay pannalam.</div>
   <div class="act"><div class="q"><button type="button" id="qm" aria-label="Decrease">-</button><span id="qn">1</span><button type="button" id="qp" aria-label="Increase">+</button></div>
    <button type="button" class="go" id="atc" style="background:var(--brown)">Add to Cart</button><button type="button" class="go" id="buy">Buy Now</button></div>
   <div class="pdesc" id="pdsc"></div>
@@ -417,7 +431,7 @@ footer{background:#3a2e25;color:#f7f2e9;padding:50px 5% 20px;margin-top:50px}
   <div class="fgp"><label for="nm">Full Name *</label><input id="nm" required placeholder="Enter your full name" autocomplete="name"></div>
   <div class="fgp"><label for="ph">WhatsApp / Phone Number *</label><input id="ph" type="tel" required placeholder="Enter 10 digit number" autocomplete="tel"></div>
   <div class="fgp"><label for="ad">Delivery Address with Pincode *</label><textarea id="ad" required placeholder="Door No, Street, Landmark, City, Pincode..."></textarea></div>
-  <button class="go wa" type="submit">Confirm Order via WhatsApp ✆</button>
+  <button class="go wa" type="submit">Continue to Payment →</button>
  </form>
 </div></div>
 
@@ -451,7 +465,7 @@ var LI={};
 var S=(function(){var d=window.ORCHIDS_DATA||{P:[],F:{a:"",p:"",e:""},B:[],h:"",v:0},l=null;try{l=JSON.parse(localStorage.getItem("opg_data"))}catch(e){}return l&&l.P&&l.v>=(d.v||0)?l:d})();
 var P=S.P,F=S.F,SL=S.B;
 if(!S.C)S.C=CATS.slice(3);CATS=CATS.slice(0,3).concat(S.C);
-function waNum(){var d=F.p.replace(/\D/g,"");return d.length===10?"91"+d:d}
+function waNum(){var d=payCfg().wa.replace(/\D/g,"");return d.length===10?"91"+d:d}
 var WF=["boyfriend","girlfriend","friends","kids","brother","him","her","couple","husband","wife"];
 var WHO=[["For Boyfriend","👦","#f4d9fc","King's Corner"],["For Girlfriend","👧","#ffe4f2","Queen's Corner"],["For Friends","🧑‍🤝‍🧑","#e6e6ff","Made for Two"],["For Kids","🧒","#e3fae8","Tiny Treasures"],["For Brother","👨","#d9eaff","King's Corner"],["Him","🧔","#f4d9fc","King's Corner"],["Her","👩","#ffe4f2","Queen's Corner"],["For Couple","👫","#f4d9fc","Made for Two"],["For Husband","🤵","#e6e6ff","King's Corner"],["For Wife","👰","#ffe4f2","Queen's Corner"]];
 function $(i){return document.getElementById(i)}
@@ -543,8 +557,7 @@ $("vg").onclick=function(e){var b=e.target.closest(".vb");if(b){vi=+b.dataset.v;
 $("qm").onclick=function(){if(qty>1){qty--;pv()}};$("qp").onclick=function(){if(qty<20){qty++;pv()}};
 $("upb").onclick=function(){$("cph").click()};
 $("cph").onchange=function(){$("pc").textContent="("+this.files.length+" Photos Selected)"};
-document.querySelectorAll("[name=pm]").forEach(function(r){r.onchange=function(){$("upi").style.display=r.value==="UPI QR Scanner"&&r.checked?"block":"none"}});
-function pm(){return document.querySelector("[name=pm]:checked").value}
+function pm(){return "UPI (GPay / PhonePe / Paytm / QR)"}
 
 $("buy").onclick=function(){
  $("pvm").classList.remove("open");
@@ -559,9 +572,8 @@ $("cf").onsubmit=function(e){
  if($("cq").value.trim())L.push("- Quotes/Message: "+$("cq").value.trim());
  if(n)L.push("- Photos: "+n+" (I will send them in this chat)");
  var m="*✨ New Order from Orchids Picture Gallery! ✨*\n\n📦 *Product Details:*\n- Name: "+cur.n+"\n- Size: "+v[0]+"\n- Price: "+inr(v[1])+"\n- Quantity: "+qty+"\n💰 *Total:* "+inr(v[1]*qty)+
-  (L.length?"\n\n🎨 *Customization:*\n"+L.join("\n"):"")+"\n\n💳 *Payment:* "+pm()+"\n\n👤 *Customer:*\n- Name: "+$("nm").value.trim()+"\n- Phone: "+$("ph").value.trim()+"\n\n🏠 *Delivery Address:*\n"+$("ad").value.trim()+"\n\nPlease confirm my order and share the payment and delivery process.";
- window.open("https://wa.me/"+waNum()+"?text="+encodeURIComponent(m),"_blank","noopener");
- $("com").classList.remove("open");$("cf").reset();
+  (L.length?"\n\n🎨 *Customization:*\n"+L.join("\n"):"")+"\n\n👤 *Customer:*\n- Name: "+$("nm").value.trim()+"\n- Phone: "+$("ph").value.trim()+"\n\n🏠 *Delivery Address:*\n"+$("ad").value.trim()+"\n\nPlease confirm my order.";
+ startPay(m,v[1]*qty,function(){$("com").classList.remove("open");$("cf").reset()});
 };
 
 /* cart */
@@ -594,9 +606,8 @@ $("cartf").onsubmit=function(e){
  var L=CART.map(function(c,i){var p=prod(c.id),line=c.q*CV(c)[1];t+=line;
   var x=[];if(c.w)x.push("Wish: "+c.w);if(c.d)x.push("Date: "+c.d);if(c.qt)x.push("Message: "+c.qt);if(c.s)x.push("Song: "+c.s);if(c.n)x.push("Photos: "+c.n+" (will send in chat)");
   return (i+1)+". "+p.n+" ("+CV(c)[0]+") x"+c.q+" = "+inr(line)+(x.length?"\n   "+x.join("\n   "):"")}).join("\n");
- var m="*✨ New Order from Orchids Picture Gallery! ✨*\n\n🛒 *Items:*\n"+L+"\n\n💰 *Total:* "+inr(t)+"\n💳 *Payment:* "+$("cpm").value+"\n\n👤 *Customer:*\n- Name: "+$("cn").value.trim()+"\n- Phone: "+$("cp2").value.trim()+"\n\n🏠 *Delivery Address:*\n"+$("ca").value.trim()+"\n\nPlease confirm my order and share the payment and delivery process.";
- window.open("https://wa.me/"+waNum()+"?text="+encodeURIComponent(m),"_blank","noopener");
- CART=[];drawCart();$("cartf").reset();$("cart").classList.remove("open");
+ var m="*✨ New Order from Orchids Picture Gallery! ✨*\n\n🛒 *Items:*\n"+L+"\n\n💰 *Total:* "+inr(t)+"\n\n👤 *Customer:*\n- Name: "+$("cn").value.trim()+"\n- Phone: "+$("cp2").value.trim()+"\n\n🏠 *Delivery Address:*\n"+$("ca").value.trim()+"\n\nPlease confirm my order.";
+ startPay(m,t,function(){CART=[];drawCart();$("cartf").reset();$("cart").classList.remove("open")});
 };
 drawCart();
 
@@ -746,6 +757,24 @@ $("wf").onsubmit=function(e){e.preventDefault();syncWN();
  S.W=WN.filter(function(w){return w.n});
  Object.keys(WI).forEach(function(p){if(!S.W.some(function(w){return w.img===p}))return;LI[p]=WI[p];idbPut(p,WI[p]);addPend(p);S.lv=Date.now()});
  persist();drawWho();closeAll();openM("ap")};
+var PAYD={upi:"glorryhome@okhdfcbank",name:"Srikanth M",wa:"9894347133"},PAYST=null;
+function payCfg(){return Object.assign({},PAYD,S.PAY||{})}
+function upiQ(amt,ref){var c=payCfg();return "pa="+encodeURIComponent(c.upi)+"&pn="+encodeURIComponent(c.name)+"&am="+Number(amt).toFixed(2)+"&cu=INR&tn="+encodeURIComponent("Order "+ref)}
+function loadQR(cb){if(window.QRCode)return cb();var g=document.createElement("script");g.src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js";g.onload=function(){cb()};g.onerror=function(){cb(1)};document.head.appendChild(g)}
+function startPay(msg,total,done){var c=payCfg(),ref="ORC"+Date.now().toString(36).slice(-5).toUpperCase(),q=upiQ(total,ref);PAYST={msg:msg,total:total,ref:ref,done:done};
+ $("pyAmt").textContent=inr(total);$("pyTo").textContent="Pay to: "+c.name;$("pyId").textContent=c.upi;$("pyCp").textContent="Copy";
+ $("pyBtns").innerHTML=[["Google Pay","tez://upi/pay?","#e8f0fe"],["PhonePe","phonepe://pay?","#efe6fb"],["Paytm","paytmmp://pay?","#e3f4fc"],["Other UPI app","upi://pay?","#f2f2f2"]].map(function(b){return '<a href="'+esc(b[1]+q)+'" style="display:block;text-align:center;padding:13px 6px;border-radius:10px;text-decoration:none;font-weight:700;color:#222;background:'+b[2]+';border:1px solid #ddd">'+b[0]+'</a>'}).join("");
+ $("pyQr").innerHTML="";loadQR(function(err){if(err||!window.QRCode){$("pyQr").innerHTML='<span style="font-size:12px;color:#777">QR load aagala. Mela irukkura UPI ID-ku pay pannunga.</span>';return}new QRCode($("pyQr"),{text:"upi://pay?"+q,width:170,height:170,correctLevel:QRCode.CorrectLevel.M})});
+ $("pyM").classList.add("open")}
+function sendOrder(paid){var s=PAYST;if(!s)return;var c=payCfg(),t=paid?"\n\n💳 *Payment:* UPI "+inr(s.total)+" paid to "+c.upi+" (Ref: "+s.ref+")\n✅ I have paid. I will send the payment screenshot in this chat.":"\n\n💳 *Payment:* UPI - pay later (Ref: "+s.ref+")\n⏳ Please share the payment details.";
+ window.open("https://wa.me/"+waNum()+"?text="+encodeURIComponent(s.msg+t),"_blank","noopener");$("pyM").classList.remove("open");PAYST=null;s.done();ev("order_sent",{value:s.total})}
+$("pyDone").onclick=function(){sendOrder(true)};
+$("pyCp").onclick=function(){var b=this;try{navigator.clipboard.writeText(payCfg().upi).then(function(){b.textContent="Copied"})}catch(e){}};
+$("ap9").onclick=function(){var c=payCfg();$("pyu").value=c.upi;$("pyn").value=c.name;$("pyw").value=c.wa;$("pymsg").textContent="";openM("pym")};
+$("pyf").onsubmit=function(e){e.preventDefault();var u=$("pyu").value.trim(),w=$("pyw").value.replace(/\D/g,"");
+ if(!/^[\w.\-]{2,}@[\w]{2,}$/.test(u)){$("pymsg").textContent="UPI ID sariyaa illa. Example: name@okhdfcbank";return}
+ if(w.length<10){$("pymsg").textContent="WhatsApp number 10 digit irukkanum.";return}
+ S.PAY={upi:u,name:$("pyn").value.trim()||"Orchids Picture Gallery",wa:w.slice(-10)};persist();closeAll();openM("ap")};
 function applyLogo(){var im=document.querySelector(".bl");if(!im)return;var p=S.L||"images/logo.png";im.src=LI[p]||(p+(S.lv?"?v="+S.lv:""))}
 function shrinkPng(f,cb){var r=new FileReader();r.onload=function(){var im=new Image();im.onload=function(){var k=Math.min(1,600/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=Math.round(im.width*k);c.height=Math.round(im.height*k);c.getContext("2d").drawImage(im,0,0,c.width,c.height);cb(c.toDataURL("image/png"))};im.onerror=function(){$("lgmsg").textContent="This file is not a valid image."};im.src=r.result};r.readAsDataURL(f)}
 var newLogo=null;
