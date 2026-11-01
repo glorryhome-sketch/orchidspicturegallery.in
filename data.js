@@ -7,30 +7,24 @@ window.ORCHIDS_DATA = {
    "long": "",
    "v": [
     [
-     "Mini Size (4X4 INCHES)",
-     199
+     "Size (5 X 5 INCHES)",
+     999
     ],
     [
-     "Medium Size (6X6 INCHES)",
-     349
+     "Size (8 X 8 INCHES)",
+     1199
     ],
     [
-     "Standard Size (A4)",
-     449
-    ],
-    [
-     "Large Size (A3)",
-     849
+     "Size (10 X 10 INCHES)",
+     1999
     ]
    ],
-   "p": 199,
+   "p": 999,
    "img": "images/products/42.jpg",
    "imgs": [
     "images/products/42.jpg",
     "images/products/42-2.jpg",
-    "images/products/42-3.jpg",
-    "images/products/42-4.jpg",
-    "images/products/42-5.jpg"
+    "images/products/42-3.jpg"
    ],
    "so": false,
    "id": 42,
@@ -1637,7 +1631,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793512400589,
+ "v": 1793512710227,
  "C": [
   "Frame Stories",
   "Memory Books",
