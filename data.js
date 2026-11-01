@@ -9,24 +9,14 @@ window.ORCHIDS_DATA = {
     [
      "Size (14 X 14 INCHES)",
      699
-    ],
-    [
-     "Size (6 X 6 INCHES)",
-     799
-    ],
-    [
-     "Size (8 X 8 INCHES)",
-     999
-    ],
-    [
-     "Size (10 X 10 INCHES)",
-     1299
     ]
    ],
    "p": 699,
    "img": "images/products/41.jpg",
    "imgs": [
-    "images/products/41.jpg"
+    "images/products/41.jpg",
+    "images/products/41-2.jpg",
+    "images/products/41-3.jpg"
    ],
    "so": false,
    "id": 41,
@@ -1607,7 +1597,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793511352713,
+ "v": 1793511763967,
  "C": [
   "Frame Stories",
   "Memory Books",
