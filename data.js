@@ -1,6 +1,42 @@
 window.ORCHIDS_DATA = {
  "P": [
   {
+   "n": "Magnetic Wooden Frame",
+   "c": "Frame Stories",
+   "d": "",
+   "long": "",
+   "v": [
+    [
+     "Size (14 X 14 INCHES)",
+     699
+    ],
+    [
+     "Size (6 X 6 INCHES)",
+     799
+    ],
+    [
+     "Size (8 X 8 INCHES)",
+     999
+    ],
+    [
+     "Size (10 X 10 INCHES)",
+     1299
+    ]
+   ],
+   "p": 699,
+   "img": "images/products/41.jpg",
+   "imgs": [
+    "images/products/41.jpg"
+   ],
+   "so": false,
+   "id": 41,
+   "i": "gift",
+   "g": [
+    "#D9B5D1",
+    "#7B3F7A"
+   ]
+  },
+  {
    "n": "Acrylic Car Dashboard Image Changing Model With Light & Without Light",
    "c": "Made for Two",
    "d": "",
@@ -1461,42 +1497,6 @@ window.ORCHIDS_DATA = {
    "long": ""
   },
   {
-   "id": 5,
-   "n": "Love Birds Frame",
-   "c": "Lovebirds",
-   "d": "Special frame for couples.",
-   "i": "heart",
-   "g": [
-    "#ffc2cf",
-    "#d6455d"
-   ],
-   "v": [
-    [
-     "Mini Size (4X4 INCHES)",
-     199
-    ],
-    [
-     "Medium Size (6X6 INCHES)",
-     349
-    ],
-    [
-     "Standard Size (A4)",
-     449
-    ],
-    [
-     "Large Size (A3)",
-     849
-    ]
-   ],
-   "p": 199,
-   "img": "images/products/5.jpg",
-   "imgs": [
-    "images/products/5.jpg",
-    "images/products/5-2.jpg"
-   ],
-   "so": false
-  },
-  {
    "id": 6,
    "n": "Frame and lamination",
    "c": "King's Corner",
@@ -1607,7 +1607,7 @@ window.ORCHIDS_DATA = {
    "s": ""
   }
  ],
- "v": 1793461229986,
+ "v": 1793511352713,
  "C": [
   "Frame Stories",
   "Memory Books",
