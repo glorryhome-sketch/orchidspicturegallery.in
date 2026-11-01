@@ -747,7 +747,7 @@ function cardSlides(){clearInterval(CT);var L=[];
  if(!L.length)return;
  CT=setInterval(function(){L.forEach(function(d){if(!d.isConnected||d.matches(":hover"))return;var im=d.querySelectorAll(".sl");if(im.length<2)return;var k=[].findIndex.call(im,function(e){return e.classList.contains("on")});im.forEach(function(e,j){e.classList.toggle("on",j===(k+1)%im.length)})})},3000)}
 var _rn=render;render=function(){_rn.apply(this,arguments);cardSlides()};
-var GA_ID=""; /* paste your Google Analytics Measurement ID here, e.g. G-ABC123XYZ9 */
+var GA_ID="G-Q1K910L6G9"; /* paste your Google Analytics Measurement ID here, e.g. G-ABC123XYZ9 */
 function ev(n,o){try{if(window.gtag)window.gtag("event",n,o||{})}catch(e){}}
 (function(){var own=false;try{own=!!localStorage.getItem("opg_admin")}catch(e){}if(!GA_ID||own)return;
  window.dataLayer=window.dataLayer||[];window.gtag=function(){window.dataLayer.push(arguments)};window.gtag("js",new Date());window.gtag("config",GA_ID);
