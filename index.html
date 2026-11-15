@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem("opg_theme")==="dark"?"dark":"light"}catch(e){}</script>
 <title>Orchids Picture Gallery | Trending Products</title>
 <style>
 :root{color-scheme:light;--cream:#faf6ec;--cream2:#efe5d5;--brown:#8d4f34;--brown2:#a96945;--ink:#2d241e;--muted:#77746f;--line:#e6ddd0;--white:#fffdf9;--pink:#e85b64;--green:#28a745;--serif:Georgia,serif;
@@ -226,6 +227,32 @@ footer{background:#3a2e25;color:#f7f2e9;padding:50px 5% 20px;margin-top:50px}
 @keyframes ofMq{to{transform:translateX(-50%)}}
 @keyframes ofPulse{50%{transform:scale(1.15)}}
 @media(prefers-reduced-motion:reduce){#offbar,#offbar .mq,#offbar .pill{animation:none}}
+[data-theme="dark"]{color-scheme:dark;--cream:#16110e;--cream2:#241c17;--brown:#b8693f;--brown2:#cf8660;--ink:#f1e8de;--muted:#b3a89c;--line:#3b2f27;--white:#211a15}
+[data-theme="dark"] .ib{color:var(--ink)}[data-theme="dark"] .ib.on{color:var(--pink)}
+#tm{font-size:21px}
+[data-theme="dark"] header{background:#241c17}[data-theme="dark"] nav a{color:var(--ink)}
+[data-theme="dark"] .search{background:#2b211a;border-color:var(--line)}
+[data-theme="dark"] input,[data-theme="dark"] select,[data-theme="dark"] textarea{color:var(--ink)}
+[data-theme="dark"] .wi span,[data-theme="dark"] .pn,[data-theme="dark"] .vt{color:var(--ink)}
+[data-theme="dark"] .side{background:rgba(33,26,21,.75)}
+[data-theme="dark"] .cat{background:#2b211a}[data-theme="dark"] .cat:has(input:checked){color:#f0b08d}
+[data-theme="dark"] .note,[data-theme="dark"] .ac{border-color:var(--line)}
+[data-theme="dark"] .tb{background:#2b211a;border-color:var(--line);color:#cdbfb1}
+[data-theme="dark"] .pr{background:rgba(33,26,21,.95);border-color:var(--line)}
+[data-theme="dark"] .ic,[data-theme="dark"] .md,[data-theme="dark"] .mh,[data-theme="dark"] .ci,[data-theme="dark"] .pay,[data-theme="dark"] .upi,[data-theme="dark"] .drw{border-color:var(--line)}
+[data-theme="dark"] .pv{background:#1b1511}
+[data-theme="dark"] .vb,[data-theme="dark"] .q button,[data-theme="dark"] .cq button,[data-theme="dark"] .thm button,[data-theme="dark"] .up,[data-theme="dark"] .upi,[data-theme="dark"] #dl{background:#2b211a!important;color:var(--ink);border-color:var(--line)}
+[data-theme="dark"] .vb.on{background:#3b2326!important}
+[data-theme="dark"] .q span{background:#1f1914;color:var(--ink)}
+[data-theme="dark"] .cb{background:#1f1914;border-color:var(--line)}
+[data-theme="dark"] .fgp label,[data-theme="dark"] .msg{color:#d6c8b9}
+[data-theme="dark"] .fgp input,[data-theme="dark"] .fgp textarea,[data-theme="dark"] .fgp select{background:#2b211a;border-color:var(--line)}
+[data-theme="dark"] .ac .e{background:#3a2f28;color:var(--ink)}[data-theme="dark"] .ac .d{background:#4a2327;color:#f5b5ba}
+[data-theme="dark"] .pdesc{background:#241c17;border-color:var(--line);color:#e6d9cc}[data-theme="dark"] .pdesc h4{color:#e3a27f}
+[data-theme="dark"] .ctot{color:#e3a27f}
+[data-theme="dark"] .price,[data-theme="dark"] .pp,[data-theme="dark"] .vb b,[data-theme="dark"] .side h2{color:#e8a987}
+[data-theme="dark"] .cnt,[data-theme="dark"] .cnt strong,[data-theme="dark"] .tb label{color:#cdbfb1}
+[data-theme="dark"] .pv p{color:#b9ad9f}
 </style>
 </head>
 <body>
@@ -236,6 +263,7 @@ footer{background:#3a2e25;color:#f7f2e9;padding:50px 5% 20px;margin-top:50px}
  <div class="hr">
   <label class="search"><span aria-hidden="true">⌕</span><input id="q" type="search" placeholder="Search products..." aria-label="Search products"></label>
   <button class="ib" id="fav" title="Show favourites" aria-label="Show favourites only">♡</button>
+  <button class="ib" id="tm" aria-label="Toggle dark mode" title="Dark / Light mode">🌙</button>
   <button class="ib" id="cartb" aria-label="Open cart">🛒<span class="cc" id="cc">0</span></button>
   <button class="adm" id="adm">⚙ Admin</button>
  </div>
@@ -417,7 +445,7 @@ footer{background:#3a2e25;color:#f7f2e9;padding:50px 5% 20px;margin-top:50px}
 
 
 <div class="ov" id="pvm"><div class="md big" role="dialog" aria-modal="true" aria-labelledby="pt">
- <div class="pv"><div class="ph" id="pi"></div><div class="thm" id="thm"></div><p style="font-size:12px;color:#666;text-align:center">Preview: 100% Handcrafted</p></div>
+ <div class="pv"><div class="ph" id="pi"></div><div class="thm" id="thm"></div><p style="font-size:12px;color:var(--muted);text-align:center">Preview: 100% Handcrafted</p></div>
  <div class="pr2">
   <button class="x" data-close aria-label="Close">✕</button>
   <h2 class="pt" id="pt"></h2>
@@ -429,7 +457,7 @@ footer{background:#3a2e25;color:#f7f2e9;padding:50px 5% 20px;margin-top:50px}
    <div class="fgp"><label for="cd">Add "Memorable date" *</label><input type="date" id="cd"></div>
    <div class="fgp" style="margin:0"><label for="cq">Add "5 to 10 line wishes (or) quotes"</label><textarea id="cq" placeholder="Enter your quotes or messages..."></textarea></div>
      </div>
-  <div style="font-size:12px;color:#666;margin:10px 0">💳 Payment: UPI (GPay / PhonePe / Paytm / QR). Order click panna adutha step la pay pannalam.</div>
+  <div style="font-size:12px;color:var(--muted);margin:10px 0">💳 Payment: UPI (GPay / PhonePe / Paytm / QR). Order click panna adutha step la pay pannalam.</div>
   <div class="act"><div class="q"><button type="button" id="qm" aria-label="Decrease">-</button><span id="qn">1</span><button type="button" id="qp" aria-label="Increase">+</button></div>
    <button type="button" class="go" id="atc" style="background:var(--brown)">Add to Cart</button><button type="button" class="go" id="buy">Buy Now</button></div>
   <div class="pdesc" id="pdsc"></div>
@@ -791,6 +819,9 @@ $("pyf").onsubmit=function(e){e.preventDefault();var u=$("pyu").value.trim(),w=$
  if(!/^[\w.\-]{2,}@[\w]{2,}$/.test(u)){$("pymsg").textContent="UPI ID sariyaa illa. Example: name@okhdfcbank";return}
  if(w.length<10){$("pymsg").textContent="WhatsApp number 10 digit irukkanum.";return}
  S.PAY={upi:u,name:$("pyn").value.trim()||"Orchids Picture Gallery",wa:w.slice(-10),off:Math.min(90,Math.max(0,Number($("pyo").value)||0)),ot:$("pyt").value.trim()||"Festival Offer"};persist();drawOff();drawCart();closeAll();openM("ap")};
+function setTheme(t){document.documentElement.dataset.theme=t;try{localStorage.setItem("opg_theme",t)}catch(e){}$("tm").textContent=t==="dark"?"☀️":"🌙"}
+$("tm").onclick=function(){setTheme(document.documentElement.dataset.theme==="dark"?"light":"dark")};
+$("tm").textContent=document.documentElement.dataset.theme==="dark"?"☀️":"🌙";
 function applyLogo(){var im=document.querySelector(".bl");if(!im)return;var p=S.L||"images/logo.png";im.src=LI[p]||(p+(S.lv?"?v="+S.lv:""))}
 function shrinkPng(f,cb){var r=new FileReader();r.onload=function(){var im=new Image();im.onload=function(){var k=Math.min(1,600/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=Math.round(im.width*k);c.height=Math.round(im.height*k);c.getContext("2d").drawImage(im,0,0,c.width,c.height);cb(c.toDataURL("image/png"))};im.onerror=function(){$("lgmsg").textContent="This file is not a valid image."};im.src=r.result};r.readAsDataURL(f)}
 var newLogo=null;
